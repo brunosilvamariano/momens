@@ -1,0 +1,223 @@
+:root {
+    /* Escala de fonte base para ajuste fluido */
+    font-size: 62.5%; /* 10px = 1rem, base para a escalabilidade do layout */
+
+    --cor-fundo-principal: #f5f5f5;
+    --cor-primaria: #3d5afe; 
+    --cor-secundaria: #ff4081;
+    --cor-titulo: #ff1744; 
+    --cor-texto: #000;
+    --cor-borda: #e0e0e0;
+    --cor-limite-excedido: #FF6347;
+    --navbar-bg: #ffffff;
+    --navbar-text: #333333;
+    --navbar-hover: #ff3366;
+
+    /* Escala de fonte fluida usando clamp() */
+    --font-step-title: clamp(1.6rem, 2vw, 3rem); /* Tamanho do título (com variação entre 1.6rem e 3rem) */
+    --font-titulo-preview: clamp(1.6rem, 2.5vw, 2.8rem); /* Ajustado para manter o título mais próximo do tamanho do texto */
+    --font-mensagem: clamp(1rem, 2vw, 2rem); /* Tamanho da mensagem */
+    --font-char-count: clamp(0.9rem, 1.6vw, 1.5rem); /* Tamanho do contador de caracteres */
+
+    /* Ajuste de margens e padding */
+    --padding-geral: clamp(1rem, 2vw, 2rem); /* Padding que se ajusta de forma fluida */
+    --margem-geral: clamp(0.8rem, 1.5vw, 2rem); /* Margem fluida */
+
+    /* Fontes do Navbar */
+    --font-navbar: clamp(1rem, 1.5vw, 1.3rem);  /* Tamanho de fonte para o menu */
+    --font-navbar-logo: clamp(100px, 15vw, 200px);  /* Logo fluída */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+}
+
+/************* Estilo do Navbar ***************/
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
+.navbar-nav .nav-link {
+    font-size: var(--font-navbar);  /* Ajuste da fonte do menu */
+    color: var(--navbar-text);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--navbar-hover);
+}
+
+.navbar-brand img {
+    width: var(--font-navbar-logo);  /* Ajuste da logo */
+    height: auto;
+}
+
+.navbar-toggler-icon {
+    font-size: clamp(1.2rem, 2vw, 2rem);  /* Ícone do menu */
+}
+
+/* Estilo do Dropdown */
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: var(--navbar-hover);
+    color: #ffffff;
+}
+
+/************* Estilo do Step Container ***************/
+.step-container {
+    background-color: white;
+    padding: var(--padding-geral); /* Padding fluido */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+    font-size: var(--font-step-title); /* Tamanho do título ajustável */
+    font-weight: bold;
+    color: #585858;
+    margin-bottom: var(--margem-geral); /* Margem fluida abaixo do título */
+}
+
+#titulo {
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--font-titulo-preview); /* Tamanho do título ajustável */
+    border: 1px solid var(--cor-borda);
+    padding: var(--padding-geral); /* Padding fluido */
+    border-radius: 5px;
+}
+
+#mensagem {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid var(--cor-borda);
+    padding: var(--padding-geral); /* Padding fluido */
+    border-radius: 5px;
+    resize: none;
+}
+
+/* Estilo dos Botões */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--margem-geral); /* Margem fluida no container de botões */
+}
+
+button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: var(--padding-geral) 2rem; /* Padding fluido no botão */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* Preview Container */
+.preview-container {
+    background-color: white;
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--padding-geral); /* Padding fluido no preview */
+    margin-top: var(--margem-geral); /* Margem fluida no preview */
+    transition: height 0.5s ease-in-out;
+}
+
+.titulo-preview {
+    font-family: 'Dancing Script', cursive;
+    font-size: var(--font-titulo-preview); /* Tamanho fluido do título no preview */
+    color: var(--cor-titulo);
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.mensagem-preview {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-mensagem); /* Tamanho fluido da mensagem no preview */
+    color: var(--cor-texto);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo de limite de caracteres */
+#char-count {
+    font-size: var(--font-char-count); /* Tamanho fluido do contador de caracteres */
+    color: var(--cor-primaria);
+    margin-top: 5px;
+}
+
+
+
+/* Estilo Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+footer a {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff3366;
+}
+
+footer .social-links li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+footer .social-links a {
+    font-size: 1.3rem;
+}
+
+footer .social-links a:hover {
+    color: #ff3366;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer .col-md-4 {
+        text-align: left;
+    }
+
+    footer .social-links {
+        text-align: left;
+    }
+
+    footer .social-links li {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    footer .text-md-left {
+        text-align: left;
+    }
+
+    footer .text-md-right {
+        text-align: left;
+    }
+}
