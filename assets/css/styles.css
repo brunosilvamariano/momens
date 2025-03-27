@@ -169,6 +169,38 @@ button:hover {
 }
 
 
+/* Estilo do Data Preview */
+.data-preview {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-mensagem); /* Ajuste de tamanho fluido da data */
+    color: var(--cor-texto);
+    word-wrap: break-word;
+}
+
+/* Atualização nos Botões */
+button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: var(--padding-geral) 2rem; /* Padding fluido no botão */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
+#data-inicio {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
 
 /* Estilo Footer */
 footer {
