@@ -216,13 +216,9 @@ footer {
         margin-top: 10px;  /* Adiciona margem superior */
     }
 }
-
-
  /* ===============================
    Estilo para o container do upload
    =============================== */ 
-
-/* Estilo para o container do upload */
 .upload-container {
     position: relative;
     text-align: center;
@@ -293,3 +289,7 @@ input[type="file"] {
     cursor: pointer;
     font-size: 14px;
 }
+
+
+
+
