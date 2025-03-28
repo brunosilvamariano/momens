@@ -1,65 +1,51 @@
-// Atualiza a prévia do título, mensagem e data
+// Atualiza a prévia do título e da mensagem
 function atualizarPreview() {
     // Atualiza o título
-    const titulo = document.getElementById('titulo').value;
-    const tituloPreview = document.getElementById('titulo-preview');
-    tituloPreview.textContent = titulo ? titulo : "Seu Título Aparecerá Aqui 💖";
+    const titulo = document.getElementById('titulo').value; // Obtém o valor do campo de input do título
+    const tituloPreview = document.getElementById('titulo-preview'); // Obtém o elemento de pré-visualização do título
+    tituloPreview.textContent = titulo ? titulo : "Seu Título Aparecerá Aqui 💖"; // Se o título não estiver vazio, atualiza a prévia
 
     // Atualiza a mensagem
-    const mensagem = document.getElementById('mensagem').value;
-    const mensagemPreview = document.getElementById('mensagem-preview');
-    mensagemPreview.textContent = mensagem ? mensagem : "Sua mensagem dedicada aparecerá aqui 🌸";
+    const mensagem = document.getElementById('mensagem').value; // Obtém o valor do campo de textarea
+    const mensagemPreview = document.getElementById('mensagem-preview'); // Obtém o elemento de pré-visualização da mensagem
+    mensagemPreview.textContent = mensagem ? mensagem : "Sua mensagem dedicada aparecerá aqui 🌸"; // Atualiza a prévia
 
     // Atualiza a contagem de caracteres da mensagem
-    const charCount = document.getElementById('char-count');
-    charCount.textContent = mensagem.length;
-    
-// Atualiza a data
-const dataEspecial = document.getElementById('data-especial').value;
-const dataPreview = document.getElementById('data-preview');
-const dateObj = new Date(dataEspecial);
-dataPreview.textContent = dataEspecial ? `Data Especial: ${dateObj.toLocaleString()} 🕒` : "Data Especial: DD/MM/AAAA 🕒";
-
-
+    const charCount = document.getElementById('char-count'); // Obtém o contador de caracteres
+    charCount.textContent = mensagem.length; // Mostra a quantidade de caracteres digitados na mensagem
 }
 
-// Ação do botão "Próxima Etapa"
-document.getElementById('next-btn-1').addEventListener('click', function() {
-    document.getElementById('step-titulo').style.display = 'none';
-    document.getElementById('step-mensagem').style.display = 'block';
-    document.getElementById('progress-bar').style.width = '33%';
-    atualizarPreview();
+// Ação do botão "Próxima Etapa" para avançar do título para a mensagem
+document.getElementById('next-btn-1').addEventListener('click', function () {
+    document.getElementById('step-titulo').style.display = 'none'; // Esconde a etapa do título
+    document.getElementById('step-mensagem').style.display = 'block'; // Mostra a etapa da mensagem
+    document.getElementById('progress-bar').style.width = '33%'; // Atualiza a barra de progresso para 33%
+    atualizarPreview(); // Atualiza a prévia
 });
 
-document.getElementById('next-btn-2').addEventListener('click', function() {
-    document.getElementById('step-mensagem').style.display = 'none';
-    document.getElementById('step-data').style.display = 'block';
-    document.getElementById('progress-bar').style.width = '66%';
-    atualizarPreview();
+// Ação do botão "Próxima Etapa" para avançar da mensagem para a etapa final
+document.getElementById('next-btn-2').addEventListener('click', function () {
+    document.getElementById('step-mensagem').style.display = 'none'; // Esconde a etapa da mensagem
+    document.getElementById('progress-bar').style.width = '66%'; // Atualiza a barra de progresso para 66%
+    atualizarPreview(); // Atualiza a prévia
 });
 
-document.getElementById('finish-btn').addEventListener('click', function() {
-    alert('Álbum finalizado com sucesso!');
-    document.getElementById('progress-bar').style.width = '100%';
-    atualizarPreview();
+// Ação do botão "Finalizar"
+document.getElementById('finish-btn').addEventListener('click', function () {
+    alert('Álbum finalizado com sucesso!'); // Exibe uma mensagem de confirmação
+    document.getElementById('progress-bar').style.width = '100%'; // Atualiza a barra de progresso para 100%
+    atualizarPreview(); // Atualiza a prévia
 });
 
-// Botão Voltar
-document.getElementById('back-btn-1').addEventListener('click', function() {
-    document.getElementById('step-titulo').style.display = 'block';
-    document.getElementById('step-mensagem').style.display = 'none';
-    document.getElementById('progress-bar').style.width = '0%';
+// Ação do botão "Voltar" para retornar da mensagem para o título
+document.getElementById('back-btn-1').addEventListener('click', function () {
+    document.getElementById('step-titulo').style.display = 'block'; // Mostra a etapa do título
+    document.getElementById('step-mensagem').style.display = 'none'; // Esconde a etapa da mensagem
+    document.getElementById('progress-bar').style.width = '0%'; // Reseta a barra de progresso
 });
 
-document.getElementById('back-btn-2').addEventListener('click', function() {
-    document.getElementById('step-mensagem').style.display = 'block';
-    document.getElementById('step-data').style.display = 'none';
-    document.getElementById('progress-bar').style.width = '33%';
-});
-
-// Função de alternância de modo escuro
-document.querySelector('.toggle-dark-mode').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.main-header').classList.toggle('bg-dark');
-    document.querySelector('.main-header').classList.toggle('text-light');
+// Ação do botão "Voltar" para retornar da etapa final para a mensagem
+document.getElementById('back-btn-2').addEventListener('click', function () {
+    document.getElementById('step-mensagem').style.display = 'block'; // Mostra a etapa da mensagem
+    document.getElementById('progress-bar').style.width = '33%'; // Atualiza a barra de progresso para 33%
 });
