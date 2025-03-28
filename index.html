@@ -2,51 +2,81 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação como UTF-8 para suportar caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o layout em dispositivos móveis -->
-    <title>Momentos Incríveis 💖</title> <!-- Define o título que aparecerá na aba do navegador -->
+    <!-- Definição do charset, para garantir a compatibilidade com caracteres especiais -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport para garantir que o site seja responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Meta tags para SEO e compartilhamento em redes sociais -->
+    <!-- Título da página, o título é fundamental para SEO e experiência do usuário -->
+    <title>Momentos Incríveis 💖</title>
+
+    <!-- Meta descrição para SEO -->
+    <!-- A descrição é exibida nos resultados de busca e é importante para SEO -->
     <meta name="description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
+
+    <!-- Meta tags para otimização em redes sociais (Open Graph para Facebook, Twitter, etc.) -->
+    <!-- Essenciais para quando o link for compartilhado nas redes sociais -->
     <meta property="og:title" content="Momentos Incríveis 💖">
     <meta property="og:description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
-    <meta property="og:image" content="URL_da_imagem_de_preview"> <!-- Ajuste com a URL correta da imagem de preview -->
-    <meta property="og:url" content="URL_do_site"> <!-- URL do site -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- Define o formato de cartão no Twitter -->
+    <meta property="og:image" content="URL_da_imagem_de_preview">
+    <meta property="og:url" content="URL_do_site">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Links de ícones, fontes e CSS externos -->
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon"> <!-- Ícone da aba do navegador -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"> <!-- Fontes personalizadas -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Ícones do Bootstrap -->
-    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Arquivo de estilos customizados -->
+    <!-- Favicon: ícone que aparece na aba do navegador -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts (tipografia que já está sendo usada) -->
+    <!-- Cuidado com o número de fontes para não sobrecarregar o carregamento da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap para estilos prontos e responsividade -->
+    <!-- Considerar o uso de uma versão específica em vez de CDN para melhor performance em produção -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons para ícones, como a adição de ícones nos botões de navegação ou interações -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Link para o arquivo CSS próprio do projeto -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="bg-dark text-white"> <!-- Corpo da página com fundo escuro e texto branco -->
-
-    <!-- Cabeçalho com navegação -->
+<body class="bg-dark text-white">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark shadow"> <!-- Navbar escura com efeito de sombra -->
-            <div class="container d-flex justify-content-between align-items-center"> <!-- Ajuste flexível de espaçamento -->
-                <a class="navbar-brand" href="/"> <!-- Logo do site -->
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo alinhada à esquerda -->
+                <a class="navbar-brand" href="/">
                     <img src="assets/img/logo/logo.png" alt="Logo Momentos Incríveis" width="120" height="40" class="d-inline-block align-middle">
                 </a>
+        
+                <!-- Botão para o menu em dispositivos móveis -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> <!-- Ícone do menu hamburguer em dispositivos menores -->
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarContent"> <!-- Navegação principal -->
-                    <ul class="navbar-nav ms-auto d-flex justify-content-end w-100"> <!-- Lista de links no menu -->
+        
+                <!-- Links de navegação (colapsados em dispositivos móveis) -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto d-flex justify-content-end w-100">
+                        <!-- Link de Início -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">Início</a>
                         </li>
+        
+                        <!-- Link de Planos -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">Planos</a>
                         </li>
+        
+                        <!-- Link de FAQ -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">F.A.Q</a>
                         </li>
+        
+                        <!-- Link de Assinar Agora -->
                         <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center" href="#"> <!-- Link com ícone de presente -->
+                            <a class="nav-link d-flex align-items-center" href="#">
                                 <i class="bi bi-gift-fill me-2"></i> Assinar Agora
                             </a>
                         </li>
@@ -55,49 +85,48 @@
             </div>
         </nav>
     </header>
-
-    <!-- Conteúdo principal -->
+    
     <main class="container my-5">
-        <!-- Barra de progresso para exibir o progresso nas etapas -->
+        <!-- Barra de Progresso (Etapas) -->
         <section class="progress mb-4">
             <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress-bar" style="width: 0%;"></div>
         </section>
-
-        <!-- Seção de criação de título e mensagem -->
+    
         <section class="card shadow-sm p-4 mb-4">
+            <!-- Etapa 1: Título -->
             <div id="step-titulo">
                 <h2 class="text-center mb-3">💌 Crie um Título Especial</h2>
                 <input type="text" class="form-control mb-2" id="titulo" maxlength="50" placeholder="Ex: Nossa História 🌸" oninput="atualizarPreview()">
                 <p class="text-muted">Máximo: 50 caracteres</p>
-                <button class="btn btn-danger w-100 mt-3" id="next-btn-1">Próxima Etapa ➡️</button> <!-- Botão para avançar -->
+                <button class="btn btn-danger w-100 mt-3" id="next-btn-1">Próxima Etapa ➡️</button>
             </div>
-
-            <div id="step-mensagem" style="display: none;"> <!-- Segunda etapa, oculta por padrão -->
+        
+            <!-- Etapa 2: Mensagem -->
+            <div id="step-mensagem" style="display: none;">
                 <h2 class="text-center mb-3">📜 Escreva Sua Mensagem Dedicada</h2>
                 <textarea class="form-control" id="mensagem" rows="4" maxlength="750" placeholder="Digite algo especial, ex: Você é meu sol ☀️" oninput="atualizarPreview()"></textarea>
-                <p class="text-muted"><span id="char-count">0</span>/750 caracteres</p> <!-- Contador de caracteres -->
-                <div class="d-flex flex-column flex-sm-row justify-content-between mt-3">
-                    <button class="btn btn-outline-secondary mb-2 mb-sm-0 w-100 w-sm-50 me-sm-3" id="back-btn-1">⬅️ Voltar</button> <!-- Adicionando a margem à direita (me-sm-3) -->
-                    <button class="btn btn-danger w-100 w-sm-50" id="next-btn-2">Próxima Etapa ➡️</button>
+                <p class="text-muted"><span id="char-count">0</span>/750 caracteres</p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-outline-secondary" id="back-btn-1">⬅️ Voltar</button>
+                    <button class="btn btn-danger" id="next-btn-2">Próxima Etapa ➡️</button>
                 </div>
             </div>
         </section>
-
-        <!-- Seção de pré-visualização da criação -->
+    
+        <!-- Prévia Dinâmica -->
         <section class="preview-container bg-dark rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
             <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui 💖</h2>
             <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui 🌸</p>
         </section>
     </main>
-
-    <!-- Rodapé -->
+    
     <footer class="bg-dark text-center py-3">
         <p class="text-muted">© 2025 Momentos Incríveis - Todos os direitos reservados</p>
     </footer>
-
-    <!-- Scripts externos -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
-    <script src="assets/js/preview.js"></script> <!-- Arquivo JS customizado -->
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/preview.js"></script>
 </body>
 
 </html>
