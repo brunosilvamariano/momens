@@ -1,255 +1,191 @@
+/* ===============================
+   Definindo Variáveis de Cores
+   =============================== */
 :root {
-    /* Escala de fonte base para ajuste fluido */
-    font-size: 62.5%; /* 10px = 1rem, base para a escalabilidade do layout */
-
-    --cor-fundo-principal: #f5f5f5;
-    --cor-primaria: #3d5afe; 
-    --cor-secundaria: #ff4081;
-    --cor-titulo: #ff1744; 
-    --cor-texto: #000;
-    --cor-borda: #e0e0e0;
-    --cor-limite-excedido: #FF6347;
-    --navbar-bg: #ffffff;
-    --navbar-text: #333333;
-    --navbar-hover: #ff3366;
-
-    /* Escala de fonte fluida usando clamp() */
-    --font-step-title: clamp(1.6rem, 2vw, 3rem); /* Tamanho do título (com variação entre 1.6rem e 3rem) */
-    --font-titulo-preview: clamp(1.6rem, 2.5vw, 2.8rem); /* Ajustado para manter o título mais próximo do tamanho do texto */
-    --font-mensagem: clamp(1rem, 2vw, 2rem); /* Tamanho da mensagem */
-    --font-char-count: clamp(0.9rem, 1.6vw, 1.5rem); /* Tamanho do contador de caracteres */
-
-    /* Ajuste de margens e padding */
-    --padding-geral: clamp(1rem, 2vw, 2rem); /* Padding que se ajusta de forma fluida */
-    --margem-geral: clamp(0.8rem, 1.5vw, 2rem); /* Margem fluida */
-
-    /* Fontes do Navbar */
-    --font-navbar: clamp(1rem, 1.5vw, 1.3rem);  /* Tamanho de fonte para o menu */
-    --font-navbar-logo: clamp(100px, 15vw, 200px);  /* Logo fluída */
+    --cor-fundo-escuro: #121212;   /* Fundo escuro para o corpo */
+    --cor-texto-claro: #ffffff;    /* Texto claro para facilitar a leitura */
+    --cor-texto-escuro: #212121;   /* Texto escuro (para contraste com fundo claro) */
+    --cor-primaria: #ff2020;       /* Cor principal, para botões e destaques */
+    --cor-secundaria: #6c757d;     /* Cor secundária para textos mais suaves */
+    --cor-escuro: #333333;         /* Cor escura para seções secundárias */
+    --cor-claro: #f8f9fa;          /* Cor clara para fundos secundários */
 }
 
+/* ===============================
+   Estilos Globais
+   =============================== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cor-fundo-principal);
-    color: var(--cor-texto);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    font-family: 'Poppins', sans-serif;  /* Fonte principal */
+    background-color: var(--cor-fundo-escuro); /* Fundo escuro */
+    color: var(--cor-texto-claro);    /* Texto claro para boa leitura */
+    margin: 0;
+    padding: 0;
 }
 
-/************* Estilo do Navbar ***************/
-.navbar {
-    background-color: var(--navbar-bg);
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive; /* Fontes decorativas para títulos */
 }
 
-.navbar-nav .nav-link {
-    font-size: var(--font-navbar);  /* Ajuste da fonte do menu */
-    color: var(--navbar-text);
-    font-weight: 400;
-    transition: color 0.3s ease;
+main {
+    max-width: 1024px;  /* Limita a largura máxima do conteúdo */
+    margin: 0 auto;     /* Centraliza o conteúdo */
 }
 
-.navbar-nav .nav-link:hover {
-    color: var(--navbar-hover);
+/* ===============================
+   Estilos do Header
+   =============================== */
+.main-header {
+    background-color: var(--cor-escuro);   /* Fundo escuro para o header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
 }
 
-.navbar-brand img {
-    width: var(--font-navbar-logo);  /* Ajuste da logo */
-    height: auto;
+/* ===============================
+   Estilos dos Cards de Contagem Regressiva
+   =============================== */
+.countdown-card {
+    background-color: var(--cor-escuro); /* Fundo escuro */
+    color: var(--cor-texto-claro);       /* Texto claro */
+    padding: 20px;
+    border-radius: 10px;                 /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-.navbar-toggler-icon {
-    font-size: clamp(1.2rem, 2vw, 2rem);  /* Ícone do menu */
+.countdown-card h4 {
+    font-size: 2rem;   /* Tamanho grande para os números */
+    font-weight: 700;   /* Peso da fonte */
 }
 
-/* Estilo do Dropdown */
-.dropdown-menu {
-    border-radius: 8px;
+.countdown-card p {
+    font-size: 1rem;    /* Tamanho de fonte menor para os rótulos */
+    color: var(--cor-secundaria); /* Cor do texto secundário */
+}
+
+#countdown-container {
+    margin-top: 40px; /* Distância para não colidir com outros elementos */
+}
+
+/* ===============================
+   Estilos do Relogio
+   =============================== */
+
+/* ===============================
+   Estilos do Footer
+   =============================== */
+footer {
+    background-color: var(--cor-escuro); /* Fundo escuro para o footer */
+    color: var(--cor-texto-claro);  /* Texto claro no footer */
+    padding: 10px 0;
+    text-align: center;  /* Centraliza o texto no footer */
+}
+
+/* ===============================
+   Estilos do Formulário
+   =============================== */
+.card {
     border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: var(--cor-escuro);  /* Fundo escuro para os cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra leve */
+    color: var(--cor-texto-claro);   /* Texto claro */
+    padding: 20px;   /* Espaçamento interno */
 }
 
-.dropdown-item:hover {
-    background-color: var(--navbar-hover);
-    color: #ffffff;
+.card input, .card textarea {
+    border-radius: 10px;  /* Bordas arredondadas */
+    border: 1px solid #ddd;  /* Borda leve */
+    padding: 10px;      /* Espaçamento interno */
+    font-size: 1rem;    /* Tamanho de fonte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra leve */
 }
 
-/************* Estilo do Step Container ***************/
-.step-container {
-    background-color: white;
-    padding: var(--padding-geral); /* Padding fluido */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Efeito ao focar nos inputs */
+.card input:focus, .card textarea:focus {
+    outline: none;  /* Remove a borda padrão de foco */
+    border-color: var(--cor-primaria);  /* Borda em cor primária */
+    box-shadow: 0 0 5px rgba(214, 51, 108, 0.5);  /* Efeito de sombra */
 }
 
-.step-title {
-    font-size: var(--font-step-title); /* Tamanho do título ajustável */
-    font-weight: bold;
-    color: #585858;
-    margin-bottom: var(--margem-geral); /* Margem fluida abaixo do título */
+/* Estilos para os Botões */
+.card button {
+    border-radius: 25px;  /* Bordas arredondadas */
+    padding: 12px 20px;   /* Espaçamento interno */
+    font-size: 1.1rem;    /* Tamanho da fonte */
+    transition: all 0.3s ease;  /* Transição suave */
 }
 
-#titulo {
-    font-family: 'Dancing Script', cursive;
-    font-size: var(--font-titulo-preview); /* Tamanho do título ajustável */
-    border: 1px solid var(--cor-borda);
-    padding: var(--padding-geral); /* Padding fluido */
-    border-radius: 5px;
+/* Efeito de foco no botão */
+.card button:focus {
+    outline: none;   /* Remove o foco padrão */
+    box-shadow: 0 0 5px rgba(214, 51, 108, 0.5); /* Foco em cor primária */
 }
 
-#mensagem {
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid var(--cor-borda);
-    padding: var(--padding-geral); /* Padding fluido */
-    border-radius: 5px;
-    resize: none;
-}
-
-/* Estilo dos Botões */
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: var(--margem-geral); /* Margem fluida no container de botões */
-}
-
-button {
-    background-color: var(--cor-primaria);
-    color: white;
-    border: none;
-    padding: var(--padding-geral) 2rem; /* Padding fluido no botão */
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--cor-secundaria);
-}
-
-/* Preview Container */
+/* ===============================
+   Estilos da Prévia Dinâmica
+   =============================== */
 .preview-container {
-    background-color: white;
-    border: 2px solid var(--cor-borda);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--padding-geral); /* Padding fluido no preview */
-    margin-top: var(--margem-geral); /* Margem fluida no preview */
-    transition: height 0.5s ease-in-out;
+    background-color: var(--cor-escuro);  /* Fundo escuro */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    border-radius: 15px;   /* Bordas arredondadas */
+    padding: 20px;         /* Espaçamento interno */
+    color: var(--cor-texto-claro);   /* Texto claro */
+    max-width: 800px;      /* Largura máxima */
+    margin: 0 auto;        /* Centraliza a prévia */
+    word-wrap: break-word; /* Quebra o texto caso ultrapasse a largura */
+    overflow-wrap: break-word; /* Garante a quebra do texto em todos os navegadores */
 }
 
 .titulo-preview {
-    font-family: 'Dancing Script', cursive;
-    font-size: var(--font-titulo-preview); /* Tamanho fluido do título no preview */
-    color: var(--cor-titulo);
-    word-wrap: break-word;
-    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;  /* Fonte decorativa */
+    font-size: 1.8rem;    /* Tamanho do título */
+    color: var(--cor-primaria);  /* Cor primária */
+    transition: transform 0.3s ease; /* Transição suave */
 }
 
-.mensagem-preview {
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-mensagem); /* Tamanho fluido da mensagem no preview */
-    color: var(--cor-texto);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
-    margin-top: 10px;
+/* Efeito de hover no título */
+.titulo-preview:hover {
+    transform: scale(1.05); /* Aumenta o título ao passar o mouse */
 }
 
-/* Estilo de limite de caracteres */
-#char-count {
-    font-size: var(--font-char-count); /* Tamanho fluido do contador de caracteres */
-    color: var(--cor-primaria);
-    margin-top: 5px;
+.mensagem-preview .text-center {
+    color: var(--cor-texto-claro) !important;   /* Texto claro */
 }
 
-
-/* Estilo do Data Preview */
-.data-preview {
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-mensagem); /* Ajuste de tamanho fluido da data */
-    color: var(--cor-texto);
-    word-wrap: break-word;
+.text-muted {
+    color: var(--cor-secundaria) !important;  /* Cor mais clara para informações secundárias */
 }
 
-/* Atualização nos Botões */
-button {
-    background-color: var(--cor-primaria);
-    color: white;
-    border: none;
-    padding: var(--padding-geral) 2rem; /* Padding fluido no botão */
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--cor-secundaria);
-}
-
-
-#data-inicio {
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-
-
-
-/* Estilo Footer */
-footer {
-    background-color: #333333;
-    color: #ffffff;
-}
-
-footer a {
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ff3366;
-}
-
-footer .social-links li {
-    display: inline-block;
-    margin-right: 1.5rem;
-}
-
-footer .social-links a {
-    font-size: 1.3rem;
-}
-
-footer .social-links a:hover {
-    color: #ff3366;
-}
-
-/* Responsividade */
+/* ===============================
+   Responsividade
+   =============================== */
 @media (max-width: 768px) {
-    footer .col-md-4 {
-        text-align: left;
+    /* Ajustes no logo */
+    .logo-text {
+        font-size: 1.5rem;
+        text-align: center;   /* Centraliza o logo */
+        margin: 0 auto;
     }
 
-    footer .social-links {
-        text-align: left;
+    /* Ajustes no menu de navegação */
+    .navbar-light .navbar-nav {
+        text-align: center;   /* Centraliza os itens */
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    footer .social-links li {
-        display: inline-block;
-        margin-right: 1rem;
+    .navbar-light .navbar-nav .nav-item {
+        margin: 0;  /* Remove margens laterais */
     }
 
-    footer .text-md-left {
-        text-align: left;
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 1rem;   /* Ajuste de tamanho da fonte */
+        padding: 10px;     /* Melhor espaçamento nos itens */
     }
 
-    footer .text-md-right {
-        text-align: left;
+    .navbar-toggler {
+        margin-left: auto;  /* Alinha o botão à direita */
+    }
+
+    /* Ajustes para o botão "Assinar" */
+    .nav-menu .btn-assinar {
+        margin-top: 10px;  /* Adiciona margem superior */
     }
 }
