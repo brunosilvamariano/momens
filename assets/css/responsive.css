@@ -1,0 +1,22 @@
+/* Estilo para os parágrafos nas etapas */
+.texto-carinho {
+    font-size: 1.2rem; /* Tamanho padrão */
+    line-height: 1.5;  /* Espaciamento entre linhas */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .texto-carinho {
+        font-size: 1rem; /* Reduz o tamanho da fonte em telas pequenas */
+        line-height: 1.4; /* Ajusta o espaçamento entre as linhas */
+        padding: 0 10px;  /* Adiciona um pouco de padding para evitar sobreposição */
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-carinho {
+        font-size: 0.9rem; /* Reduz mais o tamanho da fonte em telas muito pequenas */
+        line-height: 1.3;  /* Ajusta o espaçamento entre as linhas */
+        padding: 0 8px;    /* Um pouco mais de padding para melhorar a legibilidade */
+    }
+}
