@@ -35,6 +35,7 @@
 
     <!-- Link para o arquivo CSS próprio do projeto -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body class="bg-dark text-white">
@@ -85,9 +86,9 @@
                 <h3 class="text-center">Escreva uma Mensagem 🌸</h3>
                 <textarea id="mensagem" placeholder="Digite sua mensagem dedicada" class="form-control mb-3" rows="4" maxlength="750"></textarea>
                 <p id="mensagem-count" class="text-muted text-center">0/750 caracteres</p>
-                <div class="d-flex justify-content-between">
-                    <button id="back-btn-1" class="btn btn-secondary">⬅️ Voltar</button>
-                    <button id="next-btn-2" class="btn btn-primary">Próxima Etapa ➡️</button>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-1" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-2" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
 
@@ -95,9 +96,9 @@
             <div id="step-foto" style="display: none;">
                 <h3 class="text-center">Escolha uma Foto 📸</h3>
                 <!-- Aqui você pode colocar o conteúdo para upload de foto -->
-                <div class="d-flex justify-content-between">
-                    <button id="back-btn-2" class="btn btn-secondary">⬅️ Voltar</button>
-                    <button id="next-btn-3" class="btn btn-primary">Próxima Etapa ➡️</button>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-2" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-3" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
 
@@ -105,9 +106,9 @@
             <div id="step-video" style="display: none;">
                 <h3 class="text-center">Escolha um Vídeo 🎥</h3>
                 <!-- Aqui você pode colocar o conteúdo para upload de vídeo -->
-                <div class="d-flex justify-content-between">
-                    <button id="back-btn-3" class="btn btn-secondary">⬅️ Voltar</button>
-                    <button id="next-btn-4" class="btn btn-primary">Próxima Etapa ➡️</button>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-3" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-4" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
 
@@ -115,12 +116,12 @@
             <div id="step-musica" style="display: none;">
                 <h3 class="text-center">Escolha uma Música 🎶</h3>
                 <!-- Aqui você pode colocar o conteúdo para upload de música -->
-                <div class="d-flex justify-content-between">
-                    <button id="back-btn-4" class="btn btn-secondary">⬅️ Voltar</button>
-                    <button id="next-btn-5" class="btn btn-primary">Finalizar 🎉</button>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-4" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Finalizar 🎉</button>
                 </div>
             </div>
-            
+
             <!-- Etapa Final -->
             <div id="step-final" style="display: none;">
                 <h2 class="text-center">Você concluiu todas as etapas! 🎉</h2>
