@@ -1,7 +1,7 @@
 /* ===============================
    Definindo Variáveis de Cores
    =============================== */
-:root {
+   :root {
     --cor-fundo-escuro: #121212;   /* Fundo escuro para o corpo */
     --cor-texto-claro: #ffffff;    /* Texto claro para facilitar a leitura */
     --cor-texto-escuro: #212121;   /* Texto escuro (para contraste com fundo claro) */
@@ -121,22 +121,25 @@ footer {
 /* ===============================
    Estilos da Prévia Dinâmica
    =============================== */
-.preview-container {
-    background-color: var(--cor-escuro);  /* Fundo escuro */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
-    border-radius: 15px;   /* Bordas arredondadas */
+   .preview-container {
+    background: linear-gradient(135deg, #272727 25%, #303030 75%); /* Fundo com efeito de papel */
+    border: 1px dashed #ccc; /* Borda tracejada para dar o efeito de "escrevendo" */
     padding: 20px;         /* Espaçamento interno */
     color: var(--cor-texto-claro);   /* Texto claro */
     max-width: 800px;      /* Largura máxima */
     margin: 0 auto;        /* Centraliza a prévia */
     word-wrap: break-word; /* Quebra o texto caso ultrapasse a largura */
     overflow-wrap: break-word; /* Garante a quebra do texto em todos os navegadores */
+    white-space: normal;   /* Permite a quebra automática de linha */
 }
 
 .titulo-preview {
     font-family: 'Dancing Script', cursive;  /* Fonte decorativa */
     font-size: 1.8rem;    /* Tamanho do título */
     color: var(--cor-primaria);  /* Cor primária */
+    animation: typing 2s steps(40) 1s forwards, blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
     transition: transform 0.3s ease; /* Transição suave */
 }
 
@@ -145,14 +148,37 @@ footer {
     transform: scale(1.05); /* Aumenta o título ao passar o mouse */
 }
 
-.mensagem-preview .text-center {
-    color: var(--cor-texto-claro) !important;   /* Texto claro */
+#mensagem-preview {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    animation: typing 3s steps(50) 1s forwards, blink 0.75s step-end infinite;
+    white-space: normal; /* Permite quebra de linha aqui também */
+    overflow-wrap: break-word; /* Quebra as palavras longas se necessário */
 }
 
 .text-muted {
     color: var(--cor-secundaria) !important;  /* Cor mais clara para informações secundárias */
 }
 
+/* Animação de digitação 
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Efeito de cursor piscando 
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+*/
 /* ===============================
    Responsividade
    =============================== */
@@ -189,5 +215,3 @@ footer {
         margin-top: 10px;  /* Adiciona margem superior */
     }
 }
-
-
