@@ -1,51 +1,53 @@
-// Atualiza a prévia do título e da mensagem
+// Função para atualizar a pré-visualização com base nas entradas do usuário
 function atualizarPreview() {
-    // Atualiza o título
-    const titulo = document.getElementById('titulo').value; // Obtém o valor do campo de input do título
-    const tituloPreview = document.getElementById('titulo-preview'); // Obtém o elemento de pré-visualização do título
-    tituloPreview.textContent = titulo ? titulo : "Seu Título Aparecerá Aqui 💖"; // Se o título não estiver vazio, atualiza a prévia
+    // Captura os valores das cores selecionadas
+    const corFundo = document.getElementById('cor-fundo').value;
+    const corTexto = document.getElementById('cor-texto').value;
 
-    // Atualiza a mensagem
-    const mensagem = document.getElementById('mensagem').value; // Obtém o valor do campo de textarea
-    const mensagemPreview = document.getElementById('mensagem-preview'); // Obtém o elemento de pré-visualização da mensagem
-    mensagemPreview.textContent = mensagem ? mensagem : "Sua mensagem dedicada aparecerá aqui 🌸"; // Atualiza a prévia
+    // Aplica a cor de fundo e a cor do texto na pré-visualização
+    const tituloPreview = document.getElementById('titulo-preview');
+    const mensagemPreview = document.getElementById('mensagem-preview');
 
-    // Atualiza a contagem de caracteres da mensagem
-    const charCount = document.getElementById('char-count'); // Obtém o contador de caracteres
-    charCount.textContent = mensagem.length; // Mostra a quantidade de caracteres digitados na mensagem
+    // Altera a cor de fundo da pré-visualização
+    tituloPreview.style.backgroundColor = corFundo;
+    mensagemPreview.style.backgroundColor = corFundo;
+
+    // Altera a cor do texto
+    tituloPreview.style.color = corTexto;
+    mensagemPreview.style.color = corTexto;
 }
 
-// Ação do botão "Próxima Etapa" para avançar do título para a mensagem
-document.getElementById('next-btn-1').addEventListener('click', function () {
-    document.getElementById('step-titulo').style.display = 'none'; // Esconde a etapa do título
-    document.getElementById('step-mensagem').style.display = 'block'; // Mostra a etapa da mensagem
-    document.getElementById('progress-bar').style.width = '33%'; // Atualiza a barra de progresso para 33%
-    atualizarPreview(); // Atualiza a prévia
+// Atualiza o contador de caracteres na etapa da mensagem
+document.getElementById('mensagem').addEventListener('input', function() {
+    const count = this.value.length;
+    document.getElementById('char-count').textContent = count;
 });
 
-// Ação do botão "Próxima Etapa" para avançar da mensagem para a etapa final
-document.getElementById('next-btn-2').addEventListener('click', function () {
-    document.getElementById('step-mensagem').style.display = 'none'; // Esconde a etapa da mensagem
-    document.getElementById('progress-bar').style.width = '66%'; // Atualiza a barra de progresso para 66%
-    atualizarPreview(); // Atualiza a prévia
+// Função para mudar de etapas
+document.getElementById('next-btn-1').addEventListener('click', function() {
+    document.getElementById('step-titulo').style.display = 'none';
+    document.getElementById('step-mensagem').style.display = 'block';
+    document.getElementById('progress-bar').style.width = '33%';
 });
 
-// Ação do botão "Finalizar"
-document.getElementById('finish-btn').addEventListener('click', function () {
-    alert('Álbum finalizado com sucesso!'); // Exibe uma mensagem de confirmação
-    document.getElementById('progress-bar').style.width = '100%'; // Atualiza a barra de progresso para 100%
-    atualizarPreview(); // Atualiza a prévia
+document.getElementById('back-btn-1').addEventListener('click', function() {
+    document.getElementById('step-titulo').style.display = 'block';
+    document.getElementById('step-mensagem').style.display = 'none';
+    document.getElementById('progress-bar').style.width = '0%';
 });
 
-// Ação do botão "Voltar" para retornar da mensagem para o título
-document.getElementById('back-btn-1').addEventListener('click', function () {
-    document.getElementById('step-titulo').style.display = 'block'; // Mostra a etapa do título
-    document.getElementById('step-mensagem').style.display = 'none'; // Esconde a etapa da mensagem
-    document.getElementById('progress-bar').style.width = '0%'; // Reseta a barra de progresso
+document.getElementById('next-btn-2').addEventListener('click', function() {
+    document.getElementById('step-mensagem').style.display = 'none';
+    document.getElementById('step-cor').style.display = 'block';
+    document.getElementById('progress-bar').style.width = '66%';
 });
 
-// Ação do botão "Voltar" para retornar da etapa final para a mensagem
-document.getElementById('back-btn-2').addEventListener('click', function () {
-    document.getElementById('step-mensagem').style.display = 'block'; // Mostra a etapa da mensagem
-    document.getElementById('progress-bar').style.width = '33%'; // Atualiza a barra de progresso para 33%
+document.getElementById('back-btn-2').addEventListener('click', function() {
+    document.getElementById('step-mensagem').style.display = 'block';
+    document.getElementById('step-cor').style.display = 'none';
+    document.getElementById('progress-bar').style.width = '33%';
+});
+
+document.getElementById('next-btn-3').addEventListener('click', function() {
+    alert("Você concluiu a criação!");
 });

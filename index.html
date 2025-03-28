@@ -76,9 +76,9 @@
                 <h2 class="text-center mb-3">📜 Escreva Sua Mensagem Dedicada</h2>
                 <textarea class="form-control" id="mensagem" rows="4" maxlength="750" placeholder="Digite algo especial, ex: Você é meu sol ☀️" oninput="atualizarPreview()"></textarea>
                 <p class="text-muted"><span id="char-count">0</span>/750 caracteres</p> <!-- Contador de caracteres -->
-                <div class="d-flex justify-content-between"> <!-- Botões "Voltar" e "Próxima Etapa" -->
-                    <button class="btn btn-outline-secondary" id="back-btn-1">⬅️ Voltar</button>
-                    <button class="btn btn-danger" id="next-btn-2">Próxima Etapa ➡️</button>
+                <div class="d-flex flex-column flex-sm-row justify-content-between mt-3"> <!-- Flexbox para responsividade -->
+                    <button class="btn btn-outline-secondary mb-2 mb-sm-0 w-100 w-sm-auto" id="back-btn-1">⬅️ Voltar</button>
+                    <button class="btn btn-danger w-100 w-sm-auto" id="next-btn-2">Próxima Etapa ➡️</button>
                 </div>
             </div>
         </section>
