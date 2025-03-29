@@ -38,138 +38,137 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-    <body class="bg-dark text-white">
-        <header>
-            <!-- Barra de Navegação -->
-            <nav class="navbar navbar-expand-lg navbar-dark shadow">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <!-- Logo alinhada à esquerda -->
-                    <a class="navbar-brand" href="/">
-                        <img src="assets/img/logo/logo.png" alt="Logo Momentos Incríveis" width="120" height="40" class="d-inline-block align-middle">
-                    </a>
+<body class="bg-dark text-white">
+    <header>
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Logo alinhada à esquerda -->
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo/logo.png" alt="Logo Momentos Incríveis" width="120" height="40" class="d-inline-block align-middle">
+                </a>
+        
+                <!-- Botão para o menu em dispositivos móveis -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Links de navegação (colapsados em dispositivos móveis) -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto d-flex justify-content-end w-100">
+                        <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
+                        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-gift-fill me-2"></i> Assinar Agora</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container my-5">
+        <!-- Barra de Progresso (Etapas) -->
+        <section class="progress mb-4">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress-bar" style="width: 0%;"></div>
+        </section>
+    
+        <section class="card shadow-sm p-4 mb-4">
+            <!-- Etapa 1 -->
+            <div id="step-titulo">
+                <h3 class="text-center">Escolha um Título 💖</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Escolha um título doce e especial para a sua página.</p>
+                <input type="text" id="titulo" placeholder="Digite seu título" class="form-control mb-3" maxlength="50" aria-label="Título">
+                <p id="titulo-count" class="text-muted text-center">0/50 caracteres</p>
+                <button id="next-btn-1" class="btn btn-primary w-100">Próxima Etapa ➡️</button>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div id="step-mensagem" style="display: none;">
+                <h3 class="text-center">Escreva uma Mensagem 🌸</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Deixe uma mensagem carinhosa e cheia de amor.</p>
+                <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite sua dedicatória aqui..." aria-label="Mensagem"></textarea>
+                <p id="mensagem-count" class="text-muted mt-3 text-center">0/750 caracteres</p>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-1" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-2" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
             
-                    <!-- Botão para o menu em dispositivos móveis -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <!-- Etapa 3 -->
+            <div id="step-foto" style="display: none;">
+                <h3 class="text-center">Escolha até 8 Fotos 📸</h3>
+                <p class="text-center text-muted mb-3">Selecione até 8 fotos ou gifs para complementar a sua página.</p>
             
-                    <!-- Links de navegação (colapsados em dispositivos móveis) -->
-                    <div class="collapse navbar-collapse" id="navbarContent">
-                        <ul class="navbar-nav ms-auto d-flex justify-content-end w-100">
-                            <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
-                            <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-gift-fill me-2"></i> Assinar Agora</a></li>
-                        </ul>
-                    </div>
+                <!-- Estilo personalizado para o campo de upload -->
+                <div class="upload-container d-flex justify-content-center mb-3">
+                    <label for="foto-upload" class="upload-box">
+                        <span class="upload-text">Clique aqui para adicionar fotos</span>
+                        <span class="upload-info">(PNG, JPG, JPEG, GIF - até 8 fotos)</span>
+                    </label>
+                    <input type="file" id="foto-upload" class="form-control" accept="image/gif, image/jpeg, image/jpg, image/png" multiple style="display: none;" aria-label="Upload de fotos">
                 </div>
-            </nav>
-        </header>
-        
-        <main class="container my-5">
-            <!-- Barra de Progresso (Etapas) -->
-            <section class="progress mb-4">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" id="progress-bar" style="width: 0%;"></div>
-            </section>
-        
-            <section class="card shadow-sm p-4 mb-4">
-                <!-- Etapa 1 -->
-                <div id="step-titulo">
-                    <h3 class="text-center">Escolha um Título 💖</h3>
-                    <p class="text-center text-muted mb-3 texto-carinho">Escolha um título doce e especial para a sua página.</p>
-                    <input type="text" id="titulo" placeholder="Digite seu título" class="form-control mb-3" maxlength="50">
-                    <p id="titulo-count" class="text-muted text-center">0/50 caracteres</p>
-                    <button id="next-btn-1" class="btn btn-primary w-100">Próxima Etapa ➡️</button>
+            
+                <div id="foto-preview-container" class="d-none text-center">
+                    <h5>Prévia das Imagens:</h5>
+                    <div id="foto-preview" class="d-flex flex-wrap justify-content-center"></div> <!-- Pré-visualização lado a lado com botões -->
                 </div>
-
-                <!-- Etapa 2 -->
-                <div id="step-mensagem" style="display: none;">
-                    <h3 class="text-center">Escreva uma Mensagem 🌸</h3>
-                    <p class="text-center text-muted mb-3 texto-carinho">Deixe uma mensagem carinhosa e cheia de amor.</p>
-                    <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite sua dedicatória aqui..."></textarea>
-                    <p id="mensagem-count" class="text-muted text-center">0/750 caracteres</p>
-                    <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
-                        <button id="back-btn-1" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
-                        <button id="next-btn-2" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
-                    </div>
+            
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-2" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-3" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
+            </div>
 
-                <!-- Etapa 3 -->
-                <div id="step-foto" style="display: none;">
-                    <h3 class="text-center">Escolha até 8 Fotos 📸</h3>
-                    <p class="text-center text-muted mb-3">Selecione até 8 fotos ou gifs para complementar a sua página.</p>
-                
-                    <!-- Estilo personalizado para o campo de upload -->
-                    <div class="upload-container d-flex justify-content-center mb-3">
-                        <label for="foto-upload" class="upload-box">
-                            <span class="upload-text">Clique aqui para adicionar fotos</span>
-                            <span class="upload-info">(PNG, JPG, JPEG, GIF - até 8 fotos)</span>
-                        </label>
-                        <input type="file" id="foto-upload" class="form-control" accept="image/gif, image/jpeg, image/jpg, image/png" multiple style="display: none;">
-                    </div>
-                
-                    <div id="foto-preview-container" class="d-none text-center">
-                        <h5>Prévia das Imagens:</h5>
-                        <div id="foto-preview" class="d-flex flex-wrap justify-content-center"></div> <!-- Pré-visualização lado a lado com botões -->
-                    </div>
-                
-                    <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
-                        <button id="back-btn-2" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
-                        <button id="next-btn-3" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
-                    </div>
+            <!-- Etapa 4 -->
+            <div id="step-video" style="display: none;">
+                <h3 class="text-center">Escolha um Vídeo 🎥</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Escolha um vídeo que torne esse momento inesquecível.</p>
+                <!-- Aqui você pode colocar o conteúdo para upload de vídeo -->
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-3" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-4" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
+            </div>
 
-                <!-- Etapa 4 -->
-                <div id="step-video" style="display: none;">
-                    <h3 class="text-center">Escolha um Vídeo 🎥</h3>
-                    <p class="text-center text-muted mb-3 texto-carinho">Escolha um vídeo que torne esse momento inesquecível.</p>
-                    <!-- Aqui você pode colocar o conteúdo para upload de vídeo -->
-                    <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
-                        <button id="back-btn-3" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
-                        <button id="next-btn-4" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
-                    </div>
+            <!-- Etapa 5 -->
+            <div id="step-musica" style="display: none;">
+                <h3 class="text-center">Escolha uma Música 🎶</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Escolha uma música que acrescente mais emoção a esse momento.</p>
+                <!-- Aqui você pode colocar o conteúdo para upload de música -->
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                    <button id="back-btn-4" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Finalizar 🎉</button>
                 </div>
+            </div>
 
-                <!-- Etapa 5 -->
-                <div id="step-musica" style="display: none;">
-                    <h3 class="text-center">Escolha uma Música 🎶</h3>
-                    <p class="text-center text-muted mb-3 texto-carinho">Escolha uma música que acrescente mais emoção a esse momento.</p>
-                    <!-- Aqui você pode colocar o conteúdo para upload de música -->
-                    <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
-                        <button id="back-btn-4" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
-                        <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Finalizar 🎉</button>
-                    </div>
-                </div>
+            <!-- Etapa Final -->
+            <div id="step-final" style="display: none;">
+                <h2 class="text-center">Você concluiu todas as etapas! 🎉</h2>
+            </div>
+        </section>
+    
+        <!-- Pré-visualização sem botões -->
+        <section class="preview-container bg-dark rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
+            <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui 💖</h2>
+            <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui 🌸</p>
 
-                <!-- Etapa Final -->
-                <div id="step-final" style="display: none;">
-                    <h2 class="text-center">Você concluiu todas as etapas! 🎉</h2>
-                </div>
-            </section>
-        
-            <!-- Pré-visualização sem botões -->
-            <section class="preview-container bg-dark rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
-                <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui 💖</h2>
-                <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui 🌸</p>
+            <!-- Seção para exibir as imagens na pré-visualização sem botões -->
+            <div id="foto-preview-section" class="d-flex flex-wrap justify-content-center mb-3"></div>
+        </section>
 
-                <!-- Seção para exibir as imagens na pré-visualização sem botões -->
-                <div id="foto-preview-section" class="d-flex flex-wrap justify-content-center mb-3"></div>
-            </section>
-
-        </main>
-        
-        <footer class="bg-dark text-center py-3">
-            <p class="text-muted">© 2025 Momentos Incríveis - Todos os direitos reservados</p>
-        </footer>
-        
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/wizard.js"></script>
-        <script src="assets/js/preview.js"></script>
-        <script src="assets/js/caracteres.js"></script>
-        <script src="assets/js/previsializacaofotos.js"></script>
-        <script src="assets/js/transition.js"></script>
-        
-    </body>
+    </main>
+    
+    <footer class="bg-dark text-center py-3">
+        <p class="text-muted">© 2025 Momentos Incríveis - Todos os direitos reservados</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wizard.js"></script>
+    <script src="assets/js/preview.js"></script>
+    <script src="assets/js/caracteres.js"></script>
+    <script src="assets/js/previsializacaofotos.js"></script>
+    <script src="assets/js/transition.js"></script>
+</body>
 
 </html>

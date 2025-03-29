@@ -1,8 +1,21 @@
 // Função para ir para a próxima etapa
 function irParaProximaEtapa(etapaAtual, proximaEtapa, progresso) {
+    // Verifica se a etapa atual está validada (apenas exemplo de validação)
+    const etapaAtualInput = document.querySelector(`#${etapaAtual} input`);
+    if (etapaAtualInput && etapaAtualInput.required && etapaAtualInput.value.trim() === '') {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return; // Não avança se o campo estiver vazio
+    }
+
     document.getElementById(etapaAtual).style.display = 'none';  // Esconde a etapa atual
     document.getElementById(proximaEtapa).style.display = 'block';  // Mostra a próxima etapa
     document.getElementById('progress-bar').style.width = progresso;  // Atualiza a barra de progresso
+
+    // Efeito de clique no botão
+    document.querySelector(`#${etapaAtual} .btn`).classList.add('clicked');
+    setTimeout(() => {
+        document.querySelector(`#${etapaAtual} .btn`).classList.remove('clicked');
+    }, 300);  // Remove o efeito após 300ms
 }
 
 // Função para voltar para a etapa anterior
