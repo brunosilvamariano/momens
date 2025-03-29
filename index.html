@@ -94,12 +94,12 @@
                     </div>
                 </div>
 
-                <!-- Etapa 3 -->
+               <!-- Etapa 3 -->
                 <div id="step-foto" style="display: none;">
                     <h3 class="text-center">Escolha até 8 Fotos 📸</h3>
                     <p class="text-center text-muted mb-3">Selecione até 8 fotos ou gifs para complementar a sua página.</p>
-                
-                    <!-- Estilo personalizado para o campo de upload -->
+
+                    <!-- Campo de upload -->
                     <div class="upload-container d-flex justify-content-center mb-3">
                         <label for="foto-upload" class="upload-box">
                             <span class="upload-text">Clique aqui para adicionar fotos</span>
@@ -107,12 +107,13 @@
                         </label>
                         <input type="file" id="foto-upload" class="form-control" accept="image/gif, image/jpeg, image/jpg, image/png" multiple style="display: none;">
                     </div>
-                
+
+                    <!-- Prévia das imagens carregadas -->
                     <div id="foto-preview-container" class="d-none text-center">
                         <h5>Prévia das Imagens:</h5>
-                        <div id="foto-preview" class="d-flex flex-wrap justify-content-center img-grid"></div> 
+                        <div id="foto-preview" class="d-flex flex-wrap justify-content-center img-grid"></div>
                     </div>
-                
+
                     <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
                         <button id="back-btn-2" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                         <button id="next-btn-3" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
@@ -153,8 +154,11 @@
                 <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui 💖</h2>
                 <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui 🌸</p>
 
-                <!-- Seção para exibir as imagens na pré-visualização sem botões -->
-                <div id="foto-preview-section" class="d-flex flex-wrap justify-content-center mb-3"></div>
+                <div id="foto-preview-section" class="d-flex flex-wrap justify-content-center mb-3">
+                    <div class="card-img">
+                        <img src="#" alt="" class="img-fluid">
+                    </div>
+                </div>
             </section>
 
         </main>
