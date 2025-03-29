@@ -24,13 +24,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     const imgContainer = document.createElement('div');
                     imgContainer.classList.add('img-container');
                     imgContainer.setAttribute('data-index', index);
+                    imgContainer.style.position = 'relative';
+                    imgContainer.style.margin = '5px';
 
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
+                    imgElement.style.maxWidth = '100px';
+                    imgElement.style.margin = '5px';
+                    imgElement.style.borderRadius = '5px';
 
                     const deleteBtn = document.createElement('button');
                     deleteBtn.innerHTML = '❌';
-                    deleteBtn.classList.add('btn', 'btn-danger');
+                    deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
+                    deleteBtn.style.position = 'absolute';
+                    deleteBtn.style.top = '0';
+                    deleteBtn.style.right = '0';
                     deleteBtn.addEventListener('click', function () {
                         removeImage(index);
                     });
@@ -60,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Função para remover uma imagem com animação suave
+    // Função para remover uma imagem
     function removeImage(index) {
         const fileInput = document.getElementById('foto-upload');
         const files = Array.from(fileInput.files);
@@ -71,13 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         files.forEach(file => dataTransfer.items.add(file)); // Atualiza a lista de arquivos no input
         fileInput.files = dataTransfer.files;
 
-        // Animar a remoção da imagem
-        const imgContainer = document.querySelector(`.img-container[data-index="${index}"]`);
-        imgContainer.style.opacity = 0;
-        setTimeout(() => {
-            imgContainer.remove();
-            updatePreview(); // Atualiza as pré-visualizações após remoção
-        }, 300); // Tempo para o fade-out
+        updatePreview(); // Atualiza as pré-visualizações após remoção
     }
 
     // Função para atualizar a pré-visualização do texto
@@ -85,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const textInput = document.getElementById('mensagem');
         const previewText = document.getElementById('mensagem-preview');
         
+        // Atualiza a pré-visualização com a mensagem
         previewText.innerHTML = textInput.value.replace(/\n/g, '<br>'); // Substitui as quebras de linha por <br>
     }
 
