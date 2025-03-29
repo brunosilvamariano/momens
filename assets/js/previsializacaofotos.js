@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const maxFileSize = 5 * 1024 * 1024; // Limite de 5MB (em bytes)
-
     // Atualizar pré-visualização principal (sem botões de exclusão)
     function updateMainPreviewImages() {
         const mainPreviewContainer = document.getElementById('foto-preview-section');
@@ -13,32 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
             if (validExtensions.includes(file.type)) {
-                if (file.size > maxFileSize) {
-                    alert('Imagem muito grande! O tamanho máximo permitido é 5MB.');
-                    return; // Ignorar o arquivo se for maior que o limite
-                }
-
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
-                    
-                    // Criar um contêiner com tamanho fixo de 80px x 80px
-                    const imgContainer = document.createElement('div');
-                    imgContainer.style.width = '80px'; // Menor tamanho de imagem
-                    imgContainer.style.height = '80px'; // Tamanho fixo
-                    imgContainer.style.margin = '5px';
-                    imgContainer.style.overflow = 'hidden'; // Para cortar as imagens que ultrapassam
-                    imgContainer.style.position = 'relative';
-                    imgContainer.style.borderRadius = '5px';
-                    
-                    // Ajustar a imagem para preencher o contêiner sem distorção
-                    imgElement.style.width = '100%';
-                    imgElement.style.height = '100%';
-                    imgElement.style.objectFit = 'cover'; // Garantir que a imagem se ajuste corretamente no contêiner
+                    imgElement.style.maxWidth = '100px';
+                    imgElement.style.margin = '5px';
+                    imgElement.style.borderRadius = '5px';
 
-                    imgContainer.appendChild(imgElement);
-                    mainPreviewContainer.appendChild(imgContainer); // Adicionar a imagem à pré-visualização
+                    mainPreviewContainer.appendChild(imgElement); // Adicionar imagem sem botão de exclusão
                 };
                 reader.readAsDataURL(file);
             }
@@ -64,11 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
             if (validExtensions.includes(file.type)) {
-                if (file.size > maxFileSize) {
-                    alert('Imagem muito grande! O tamanho máximo permitido é 5MB.');
-                    return; // Ignorar o arquivo se for maior que o limite
-                }
-
                 validFiles++;
                 const reader = new FileReader();
                 reader.onload = function (e) {
@@ -78,15 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     imgContainer.style.position = 'relative';
                     imgContainer.style.margin = '5px';
 
-                    // Criar um contêiner com tamanho fixo de 80px x 80px
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
-                    
-                    imgElement.style.width = '100%';
-                    imgElement.style.height = '100%';
-                    imgElement.style.objectFit = 'cover'; // Garantir que a imagem se ajuste corretamente no contêiner
+                    imgElement.style.maxWidth = '100px';
+                    imgElement.style.margin = '5px';
+                    imgElement.style.borderRadius = '5px';
 
-                    // Botão de exclusão
                     const deleteBtn = document.createElement('button');
                     deleteBtn.innerHTML = '❌';
                     deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
