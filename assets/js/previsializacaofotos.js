@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const maxFileSize = 5 * 1024 * 1024; // Limite de 5MB (em bytes)
+
     // Atualizar pré-visualização principal (sem botões de exclusão)
     function updateMainPreviewImages() {
         const mainPreviewContainer = document.getElementById('foto-preview-section');
@@ -11,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
             if (validExtensions.includes(file.type)) {
+                if (file.size > maxFileSize) {
+                    alert('Imagem muito grande! O tamanho máximo permitido é 5MB.');
+                    return; // Ignorar o arquivo se for maior que o limite
+                }
+
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     const imgElement = document.createElement('img');
@@ -45,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
             if (validExtensions.includes(file.type)) {
+                if (file.size > maxFileSize) {
+                    alert('Imagem muito grande! O tamanho máximo permitido é 5MB.');
+                    return; // Ignorar o arquivo se for maior que o limite
+                }
+
                 validFiles++;
                 const reader = new FileReader();
                 reader.onload = function (e) {
