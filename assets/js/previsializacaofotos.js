@@ -22,11 +22,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 reader.onload = function (e) {
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
-                    imgElement.style.maxWidth = '100px';
-                    imgElement.style.margin = '5px';
-                    imgElement.style.borderRadius = '5px';
+                    
+                    // Criar um contêiner com tamanho fixo de 100px x 100px (1:1)
+                    const imgContainer = document.createElement('div');
+                    imgContainer.style.width = '100px';
+                    imgContainer.style.height = '100px';
+                    imgContainer.style.margin = '5px';
+                    imgContainer.style.overflow = 'hidden'; // Para cortar as imagens que ultrapassam
+                    imgContainer.style.position = 'relative';
+                    imgContainer.style.borderRadius = '5px';
+                    
+                    // Ajustar a imagem para preencher o contêiner sem distorção
+                    imgElement.style.width = '100%';
+                    imgElement.style.height = '100%';
+                    imgElement.style.objectFit = 'cover'; // Garantir que a imagem preencha o contêiner
 
-                    mainPreviewContainer.appendChild(imgElement); // Adicionar imagem sem botão de exclusão
+                    imgContainer.appendChild(imgElement);
+                    mainPreviewContainer.appendChild(imgContainer); // Adicionar a imagem à pré-visualização
                 };
                 reader.readAsDataURL(file);
             }
@@ -66,12 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     imgContainer.style.position = 'relative';
                     imgContainer.style.margin = '5px';
 
+                    // Criar um contêiner com tamanho fixo de 100px x 100px (1:1)
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
-                    imgElement.style.maxWidth = '100px';
-                    imgElement.style.margin = '5px';
-                    imgElement.style.borderRadius = '5px';
+                    
+                    imgElement.style.width = '100%';
+                    imgElement.style.height = '100%';
+                    imgElement.style.objectFit = 'cover'; // Garantir que a imagem se ajuste corretamente no contêiner
 
+                    // Botão de exclusão
                     const deleteBtn = document.createElement('button');
                     deleteBtn.innerHTML = '❌';
                     deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
