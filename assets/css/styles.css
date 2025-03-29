@@ -219,64 +219,67 @@ footer {
  /* ===============================
    Estilo para o container do upload
    =============================== */ 
-.upload-container {
+/* ===============================
+   Estilo para o container do upload
+   =============================== */
+   .upload-container {
     position: relative;
     text-align: center;
 }
 
-/* Estilo para a caixa de upload */
+/* Caixa de upload */
 .upload-box {
     display: inline-block;
     width: 100%;
     max-width: 300px;
     height: 150px;
-    border: 2px dashed var(--cor-primaria);  /* Usando a cor primária para a borda */
+    border: 2px dashed var(--cor-primaria);  /* Borda com cor primária */
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-/* Estilo do texto dentro do retângulo */
-.upload-box .upload-text {
+/* Texto dentro do retângulo */
+.upload-text {
     font-size: 16px;
-    color: var(--cor-primaria);   /* Cor primária para o texto */
+    color: var(--cor-primaria);   
     font-weight: bold;
 }
 
-/* Estilo para a informação sobre os tipos de arquivo */
-.upload-box .upload-info {
+.upload-info {
     display: block;
     font-size: 12px;
-    color: var(--cor-secundaria);  /* Cor secundária para o texto informativo */
+    color: var(--cor-secundaria); 
     margin-top: 5px;
 }
 
-/* Estilo para o input de arquivo invisível */
+/* Tornar o input invisível */
 input[type="file"] {
     display: none;
 }
 
-/* Estilo para as imagens carregadas dentro da caixa de upload */
+/* Seção de pré-visualização das imagens */
 .upload-preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));  
+    gap: 10px;  /* Espaçamento entre as imagens */
     margin-top: 10px;
-    max-height: 80px;
     overflow: auto;
 }
 
-/* Estilo para as imagens exibidas */
+/* Estilo para as imagens exibidas na pré-visualização */
 .upload-preview img {
-    max-width: 60px;
-    max-height: 60px;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 80px;  
+    max-height: 80px;
+    border-radius: 8px;  
+    object-fit: cover; 
 }
 
-/* Estilo para o botão de exclusão das imagens */
+/* Botão de exclusão das imagens */
 .upload-preview .delete-btn {
     position: absolute;
     top: 0;
@@ -290,6 +293,17 @@ input[type="file"] {
     font-size: 14px;
 }
 
+/* Layout flexível da pré-visualização com grid */
+#foto-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 10px;  
+}
 
-
-
+/* Ajuste de responsividade para telas menores */
+@media (max-width: 576px) {
+    .upload-preview img {
+        max-width: 70px;  
+        max-height: 70px;
+    }
+}
