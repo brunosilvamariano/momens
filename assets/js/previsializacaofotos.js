@@ -103,6 +103,18 @@ document.addEventListener('DOMContentLoaded', function() {
         updateImagePreview();
     }
 
+    // Função para atualizar a pré-visualização do texto
+    function updateTextPreview() {
+        const textInput = document.getElementById('mensagem'); // Obter o valor do textarea
+        const previewText = document.getElementById('mensagem-preview');
+        
+        // Atualiza a pré-visualização com a mensagem
+        previewText.innerHTML = textInput.value.replace(/\n/g, '<br>'); // Substitui as quebras de linha por <br>
+    }
+
     // Escutador de eventos para atualizações no input de arquivos
     document.getElementById('foto-upload').addEventListener('change', updateImagePreview);
+    
+    // Escutador de eventos para atualizar a pré-visualização do texto
+    document.getElementById('mensagem').addEventListener('input', updateTextPreview);
 });
