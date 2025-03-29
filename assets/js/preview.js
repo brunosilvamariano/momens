@@ -5,11 +5,11 @@ function atualizarPreview() {
     
     // Atualiza o título na pré-visualização
     const tituloPreview = document.getElementById('titulo-preview');
-    tituloPreview.textContent = titulo ? titulo : "Seu Título Aparecerá Aqui 💖";
+    tituloPreview.textContent = titulo ? titulo : "Seu Título Aparecerá Aqui";
 
     // Atualiza a mensagem na pré-visualização
     const mensagemPreview = document.getElementById('mensagem-preview');
-    mensagemPreview.textContent = mensagem ? mensagem : "Sua mensagem dedicada aparecerá aqui 🌸";
+    mensagemPreview.textContent = mensagem ? mensagem : "Sua mensagem dedicada aparecerá aqui";
 
     // Atualiza a contagem de caracteres do título
     const tituloCount = document.getElementById('titulo-count');

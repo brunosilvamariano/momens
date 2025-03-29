@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Título da página, o título é fundamental para SEO e experiência do usuário -->
-    <title>Momentos Incríveis 💖</title>
+    <title>MomenTB</title>
 
     <!-- Meta descrição para SEO -->
     <meta name="description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
 
     <!-- Meta tags para otimização em redes sociais (Open Graph para Facebook, Twitter, etc.) -->
-    <meta property="og:title" content="Momentos Incríveis 💖">
+    <meta property="og:title" content="Momentos Incríveis">
     <meta property="og:description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
     <meta property="og:image" content="URL_da_imagem_de_preview">
     <meta property="og:url" content="URL_do_site">
@@ -59,7 +59,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
-                        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-gift-fill me-2"></i> Assinar Agora</a></li>
+                        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-gift-fill me-2"></i>Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,7 +75,7 @@
         <section class="card shadow-sm p-4 mb-4">
             <!-- Etapa 1 -->
             <div id="step-titulo">
-                <h3 class="text-center">Escolha um Título 💖</h3>
+                <h3 class="text-center">Escolha um Título</h3>
                 <p class="text-center text-muted mb-3 texto-carinho">Escolha um título doce e especial para a sua página.</p>
                 <input type="text" id="titulo" placeholder="Digite seu título" class="form-control mb-3" maxlength="50" aria-label="Título">
                 <p id="titulo-count" class="text-muted text-center">0/50 caracteres</p>
@@ -84,10 +84,10 @@
 
             <!-- Etapa 2 -->
             <div id="step-mensagem" style="display: none;">
-                <h3 class="text-center">Escreva uma Mensagem 🌸</h3>
+                <h3 class="text-center">Escreva uma Mensagem</h3>
                 <p class="text-center text-muted mb-3 texto-carinho">Deixe uma mensagem carinhosa e cheia de amor.</p>
                 <textarea id="mensagem" class="form-control" rows="4" placeholder="Digite sua dedicatória aqui..." aria-label="Mensagem"></textarea>
-                <p id="mensagem-count" class="text-muted text-center">0/750 caracteres</p>
+                <p id="mensagem-count" class="text-muted text-center mt-4">0/750 caracteres</p>
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
                     <button id="back-btn-1" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                     <button id="next-btn-2" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
@@ -95,7 +95,7 @@
             </div>
             <!-- Etapa 3 -->
             <div id="step-foto" style="display: none;">
-                <h3 class="text-center">Escolha até 8 Fotos 📸</h3>
+                <h3 class="text-center">Escolha até 8 Fotos</h3>
                 <p class="text-center text-muted mb-3">Selecione até 8 fotos ou gifs para complementar a sua página.</p>
             
                 <!-- Estilo personalizado para o campo de upload -->
@@ -120,7 +120,7 @@
 
             <!-- Etapa 4 -->
             <div id="step-video" style="display: none;">
-                <h3 class="text-center">Escolha um Vídeo 🎥</h3>
+                <h3 class="text-center">Escolha um Vídeo</h3>
                 <p class="text-center text-muted mb-3 texto-carinho">Escolha um vídeo que torne esse momento inesquecível.</p>
                 <!-- Aqui você pode colocar o conteúdo para upload de vídeo -->
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
@@ -131,7 +131,7 @@
 
             <!-- Etapa 5 -->
             <div id="step-musica" style="display: none;">
-                <h3 class="text-center">Escolha uma Música 🎶</h3>
+                <h3 class="text-center">Escolha uma Música</h3>
                 <p class="text-center text-muted mb-3 texto-carinho">Escolha uma música que acrescente mais emoção a esse momento.</p>
                 <!-- Aqui você pode colocar o conteúdo para upload de música -->
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
@@ -142,14 +142,14 @@
 
             <!-- Etapa Final -->
             <div id="step-final" style="display: none;">
-                <h2 class="text-center">Você concluiu todas as etapas! 🎉</h2>
+                <h2 class="text-center">Você concluiu todas as etapas!</h2>
             </div>
         </section>
     
         <!-- Pré-visualização sem botões -->
         <section class="preview-container bg-dark rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
-            <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui 💖</h2>
-            <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui 🌸</p>
+            <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui</h2>
+            <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui</p>
 
             <!-- Seção para exibir as imagens na pré-visualização sem botões -->
             <div id="foto-preview-section" class="d-flex flex-wrap justify-content-center mb-3"></div>
