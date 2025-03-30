@@ -1232,7 +1232,7 @@ section.card {
     border-radius: var(--bordas-arredondadas);
     box-shadow: var(--sombra-suave); /* Sombra suave */
     padding: 30px;
-    max-width: 800px;
+    max-width: 500px !important; /* Reduzido a largura máxima */
     word-wrap: break-word;
     text-align: center;
     background-image: linear-gradient(to bottom right, #f0f4f8, #dbe2e8); /* Fundo com gradiente suave */
@@ -1298,6 +1298,7 @@ section.card {
 @media (max-width: 768px) {
     .preview-container {
         padding: 20px;
+        max-width: 90%; /* Reduzindo a largura para 90% da tela */
     }
 
     .titulo-preview {
@@ -1317,6 +1318,7 @@ section.card {
 @media (max-width: 425px) {
     .preview-container {
         padding: 15px;
+        max-width: 90%; /* 90% da tela para telas pequenas */
     }
 
     .titulo-preview {

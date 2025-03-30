@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        // Criar o carrossel
+        const carouselContainer = document.createElement('div');
+        carouselContainer.classList.add('carousel', 'slide');
+        carouselContainer.setAttribute('id', 'carouselExampleControls'); // Adicionando ID para as setas funcionarem
+        carouselContainer.setAttribute('data-bs-ride', 'carousel'); // Ativa o carrossel automático
+        carouselContainer.setAttribute('data-bs-interval', '3000'); // Altere o valor para a velocidade que deseja (3000ms = 3s)
+
+        // Criar a lista de imagens (para o carrossel)
+        const carouselInner = document.createElement('div');
+        carouselInner.classList.add('carousel-inner');
+
         files.forEach((file, index) => {
             const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'];
 
@@ -22,42 +33,52 @@ document.addEventListener('DOMContentLoaded', function () {
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     const imgContainer = document.createElement('div');
-                    imgContainer.classList.add('img-container');
-                    imgContainer.setAttribute('data-index', index);
-                    imgContainer.style.position = 'relative';
-                    imgContainer.style.margin = '5px';
+                    imgContainer.classList.add('carousel-item');
+                    if (index === 0) {
+                        imgContainer.classList.add('active'); // A primeira imagem fica ativa
+                    }
 
+                    // Criar o item do carrossel
                     const imgElement = document.createElement('img');
                     imgElement.src = e.target.result;
-                    imgElement.style.maxWidth = '100px';
-                    imgElement.style.margin = '5px';
-                    imgElement.style.borderRadius = '5px';
-
-                    const deleteBtn = document.createElement('button');
-                    deleteBtn.innerHTML = '❌';
-                    deleteBtn.classList.add('btn', 'btn-danger', 'btn-sm');
-                    deleteBtn.style.position = 'absolute';
-                    deleteBtn.style.top = '0';
-                    deleteBtn.style.right = '0';
-                    deleteBtn.addEventListener('click', function () {
-                        removeImage(index);
-                    });
+                    imgElement.classList.add('d-block', 'w-100');
+                    imgElement.style.height = '400px'; // Ajusta a altura do carrossel
+                    imgElement.style.objectFit = 'cover'; // Garante que a imagem ocupe o espaço sem distorcer
 
                     imgContainer.appendChild(imgElement);
-                    imgContainer.appendChild(deleteBtn);
-                    previewContainer.appendChild(imgContainer);
-
-                    // Atualiza a pré-visualização principal
-                    const mainImgElement = document.createElement('img');
-                    mainImgElement.src = e.target.result;
-                    mainImgElement.style.maxWidth = '100px';
-                    mainImgElement.style.margin = '5px';
-                    mainImgElement.style.borderRadius = '5px';
-
-                    mainPreviewContainer.appendChild(mainImgElement);
+                    carouselInner.appendChild(imgContainer);
                 };
                 reader.readAsDataURL(file);
             }
+        });
+
+        // Adicionar o carrossel à seção de pré-visualização
+        carouselContainer.appendChild(carouselInner);
+
+        // Botões de navegação do carrossel (setas)
+        const carouselControlsPrev = document.createElement('button');
+        carouselControlsPrev.classList.add('carousel-control-prev');
+        carouselControlsPrev.setAttribute('type', 'button');
+        carouselControlsPrev.setAttribute('data-bs-target', '#carouselExampleControls'); // Referência ao ID correto
+        carouselControlsPrev.setAttribute('data-bs-slide', 'prev');
+        carouselControlsPrev.innerHTML = '<span class="carousel-control-prev-icon" aria-hidden="true"></span>';
+        carouselContainer.appendChild(carouselControlsPrev);
+
+        const carouselControlsNext = document.createElement('button');
+        carouselControlsNext.classList.add('carousel-control-next');
+        carouselControlsNext.setAttribute('type', 'button');
+        carouselControlsNext.setAttribute('data-bs-target', '#carouselExampleControls'); // Referência ao ID correto
+        carouselControlsNext.setAttribute('data-bs-slide', 'next');
+        carouselControlsNext.innerHTML = '<span class="carousel-control-next-icon" aria-hidden="true"></span>';
+        carouselContainer.appendChild(carouselControlsNext);
+
+        // Adiciona o carrossel à visualização principal
+        mainPreviewContainer.appendChild(carouselContainer);
+
+        // Inicializar o carrossel após inserção de imagens (isso garante que funcione)
+        const carousel = new bootstrap.Carousel(carouselContainer, {
+            interval: 3000, // Define o tempo de intervalo (3 segundos)
+            ride: 'carousel' // Inicia o carrossel automaticamente
         });
 
         // Controlar a visibilidade do container de pré-visualização
