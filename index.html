@@ -192,24 +192,38 @@
                 </div>
             </div>
 
-            <!-- Etapa 5 -->
+            <!-- Etapa 5 - Escolha da Música -->
             <div id="step-musica" style="display: none;">
                 <h3 class="text-center">Escolha uma Música</h3>
                 <p class="text-center text-muted mb-3 texto-carinho">Escolha uma música que acrescente mais emoção a esse momento.</p>
-                <!-- Aqui você pode colocar o conteúdo para upload de música -->
-                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
+                
+                <!-- Container de upload da música -->
+                <div class="d-flex flex-column align-items-center gap-3">
+                    <!-- Caixa de upload da música -->
+                    <div class="audio-upload-container">
+                        <input type="file" id="musica-upload" class="d-none" accept="audio/*">
+                        <label for="musica-upload" class="audio-upload-box">
+                            <span class="audio-upload-text">Clique para escolher uma música</span>
+                            <span class="audio-upload-info">MP3, WAV, OGG, etc.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Botões de navegação -->
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
                     <button id="back-btn-4" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                     <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Finalizar 🎉</button>
                 </div>
             </div>
+
 
             <!-- Etapa Final -->
             <div id="step-final" style="display: none;">
                 <h2 class="text-center">Você concluiu todas as etapas!</h2>
             </div>
         </section>
-    
-        <!-- Pré-visualização do vídeo -->
+
+        <!-- Seção de Pré-visualização Geral -->
         <section class="preview-container rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
             <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui</h2>
             <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui</p>
@@ -225,7 +239,19 @@
                     Seu navegador não suporta o vídeo.
                 </video>
             </div>
+
+            <!-- Seção para exibir a pré-visualização da música -->
+            <div id="audio-preview-container" class="text-center mb-3" style="display: none;">
+                <h4>Deixe a música embalar o momento</h4>
+                <audio id="audio-preview" controls style="border-radius: var(--bordas-arredondadas); width: 100%; max-width: 100%;">
+                    <source id="audio-preview-source" src="" type="audio/mp3" />
+                    Seu navegador não suporta o áudio.
+                </audio>
+                <p id="audio-preview-name" class="mt-2 text-muted">Nome da música</p>
+            </div>
         </section>
+
+
 
     </main>
     
@@ -254,6 +280,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wizard.js"></script> <!-- Coloque esse antes -->
     <script src="assets/js/video.js"></script> <!-- Coloque esse aqui -->
+    <script src="assets/js/music.js"></script>
     <script src="assets/js/preview.js"></script>
     <script src="assets/js/caracteres.js"></script>
     <script src="assets/js/previsializacaofotos.js"></script>

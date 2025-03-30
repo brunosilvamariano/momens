@@ -1018,6 +1018,7 @@ section.card {
 /* ==========================================
     Estilos para a Etapa 5 (Música)
 ========================================== */
+/* Estilo da Etapa 5 - Música */
 #step-musica {
     text-align: center;
 }
@@ -1038,16 +1039,16 @@ section.card {
     margin-bottom: 20px;
 }
 
-/* Container de Upload */
-.music-upload-container {
+/* Container de Upload de Música */
+.audio-upload-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-/* Estilo do campo de upload */
-.music-upload-box {
+/* Estilo do campo de upload de música */
+.audio-upload-box {
     width: 100%;
     max-width: 400px;
     padding: 15px;
@@ -1057,15 +1058,17 @@ section.card {
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin: 0 auto;
 }
 
-.music-upload-box:hover {
+/* Estilo ao passar o mouse */
+.audio-upload-box:hover {
     background-color: var(--cor-fundo-botao-hover);
     border-color: var(--cor-secundaria);
 }
 
-/* Texto dentro da caixa de upload */
-.music-upload-text {
+/* Texto dentro da caixa de upload de música */
+.audio-upload-text {
     font-size: 1rem;
     font-weight: 600;
     display: block;
@@ -1073,14 +1076,15 @@ section.card {
     color: var(--cor-primaria);
 }
 
-.music-upload-info {
+/* Informações sobre o arquivo de música */
+.audio-upload-info {
     font-size: 0.85rem;
     color: var(--cor-secundaria);
 }
 
-/* Prévia da música */
-#music-preview-container {
-    display: none;
+/* Pré-visualização do áudio */
+.audio-preview-container {
+    display: none; /* Inicialmente invisível */
     margin-top: 20px;
     padding: 15px;
     border-radius: var(--bordas-arredondadas);
@@ -1088,12 +1092,21 @@ section.card {
     box-shadow: var(--sombra-suave);
 }
 
-#music-preview {
-    width: 100%;
-    max-width: 350px;
+/* Nome do arquivo de música */
+.audio-file-name {
+    font-size: 1rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
 }
 
-/* Botões */
+/* Player de áudio */
+.audio-player {
+    width: 100%;
+    border-radius: var(--bordas-arredondadas);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Botões (Voltar e Próxima Etapa) */
 #back-btn-4, #next-btn-5 {
     flex: 1;
     border-radius: var(--bordas-arredondadas);
@@ -1127,7 +1140,7 @@ section.card {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .music-upload-box {
+    .audio-upload-box {
         max-width: 100%;
     }
 }
@@ -1148,7 +1161,7 @@ section.card {
 
 @media (max-width: 320px) {
     #buttons-container {
-        flex-direction: column; /* Empilha os botões em telas ultra pequenas */
+        flex-direction: column;
         gap: 5px;
     }
 
