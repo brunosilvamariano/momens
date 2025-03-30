@@ -1,295 +1,1334 @@
-/* ===============================
-   Definindo Variáveis de Cores
-   =============================== */
-   :root {
-    --cor-fundo-escuro: #121212;   /* Fundo escuro para o corpo */
-    --cor-texto-claro: #ffffff;    /* Texto claro para facilitar a leitura */
-    --cor-texto-escuro: #212121;   /* Texto escuro (para contraste com fundo claro) */
-    --cor-primaria: #ff2020;       /* Cor principal, para botões e destaques */
-    --cor-secundaria: #6c757d;     /* Cor secundária para textos mais suaves */
-    --cor-escuro: #333333;         /* Cor escura para seções secundárias */
-    --cor-claro: #f8f9fa;          /* Cor clara para fundos secundários */
-}
+:root {
+    /* ==========================================
+            Cores Primárias e Secundárias
+    ========================================== */
+    --cor-primaria: #007bff; /* Azul vibrante (primária) */
+    --cor-secundaria: #343a40; /* Cinza escuro (secundária) */
+    --cor-terciaria: #6c757d; /* Cinza fosco, neutro */
+    --cor-quaternaria: #28a745; /* Verde vibrante */
+
+    /* ==========================================
+            Cores de Texto
+    ========================================== */
+    --cor-titulo: #2C3E50; /* Azul escuro para títulos */
+    --cor-subtitulo: #34495E; /* Cinza azulado para subtítulos */
+    --cor-paragrafo: #7F8C8D; /* Cinza escuro para texto do parágrafo */
+    --cor-link: #007bff; /* Azul vibrante para os links */
+    --cor-link-hover: #0056b3; /* Azul mais escuro para links ao passar o mouse */
+    --cor-botao-texto: #FFFFFF; /* Branco para o texto dos botões */
+    --cor-texto-destaque: #28a745; /* Verde para texto de destaque */
+
+    /* ==========================================
+            Cores de Fundo
+    ========================================== */
+    --cor-fundo-primario: #f8f9fa; /* Fundo claro e neutro para o site */
+    --cor-fundo-secundario: #e9ecef; /* Fundo secundário em cinza claro */
+    --cor-fundo-input: #ffffff; /* Fundo branco para os campos de input */
+    --cor-fundo-botao: #007bff; /* Azul vibrante para o fundo dos botões */
+    --cor-fundo-botao-hover: #0056b3; /* Azul mais escuro para o fundo do botão ao passar o mouse */
+    --cor-fundo-destaque: #28a745; /* Verde vibrante para destaque */
+
+    /* ==========================================
+            Sombra e Efeitos
+    ========================================== */
+    --sombra-suave: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --sombra-forte: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --sombra-hover: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+
+    /* ==========================================
+            Gradientes
+    ========================================== */
+    --gradiente-primario: linear-gradient(135deg, #007bff, #343a40); /* Gradiente do azul vibrante ao cinza escuro */
+    --gradiente-secundario: linear-gradient(135deg, #f8f9fa, #28a745); /* Gradiente do fundo claro ao verde */
 
 
-/* ===============================
-   Estilos Globais
-   =============================== */
-body {
-    font-family: 'Poppins', sans-serif;  /* Fonte principal */
-    background-color: var(--cor-fundo-escuro); /* Fundo escuro */
-    color: var(--cor-texto-claro);    /* Texto claro para boa leitura */
-    margin: 0;
-    padding: 0;
+    /* ==========================================
+        Tipografia
+     ========================================== */
+    --fonte-principal: 'Poppins', sans-serif; /* Fonte principal do site */
+    --fonte-secundaria: "Dancing Script", cursive; /* Fonte secundária */
+    --tamanho-fonte-titulo: 2rem; /* Tamanho da fonte para os títulos */
+    --tamanho-fonte-subtitulo: 1.5rem; /* Tamanho da fonte para os subtítulos */
+    --tamanho-fonte-paragrafo: 1rem; /* Tamanho da fonte para o texto principal */
+    --tamanho-fonte-pequena: 0.875rem; /* Tamanho da fonte para texto pequeno */
+    --peso-fonte-titulo: 700; /* Peso da fonte para os títulos */
+    --peso-fonte-normal: 400; /* Peso da fonte normal para parágrafos */
+    --altura-linha: 1.6; /* Altura da linha para legibilidade */
+    
+    /* ==========================================
+        Responsividade para Imagens
+     ========================================== */
+    --tamanho-imagem-max: 100%; /* Tamanho máximo de imagem (100% da largura do container) */
+    --tamanho-imagem-min: 300px; /* Tamanho mínimo para as imagens */
+     
+    /* Responsividade das imagens para diferentes telas */
+    --tamanho-imagem-max-grande: 80%; /* Para telas grandes */
+    --tamanho-imagem-max-media: 90%; /* Para telas médias */
+    --tamanho-imagem-max-pequena: 100%; /* Para telas pequenas */
+     
+    /* ==========================================
+        Espaçamento Responsivo
+     ========================================== */
+    --espaco-pequeno: 8px; /* Pequeno espaço de margem/padding */
+    --espaco-medium: 16px; /* Espaço médio de margem/padding */
+    --espaco-grande: 32px; /* Grande espaço de margem/padding */
+    --espaco-extra-grande: 64px; /* Espaço extra grande de margem/padding */
+    --espaco-entre-linhas: 24px; /* Espaço entre linhas de texto */
+     
+    /* ==========================================
+        Sombra e Efeitos
+     ========================================== */
+    --sombra-suave: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --sombra-forte: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --sombra-hover: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+     
+    /* ==========================================
+        Bordas
+     ========================================== */
+    --bordas-arredondadas: 6px; /* Bordas arredondadas em botões, inputs etc. */
+    --borda-fina: 1px; /* Bordas finas */
+    --borda-media: 2px; /* Bordas médias */
+    --borda-grande: 4px; /* Bordas espessas */
+     
+
+    /* ==========================================
+        Layout e Grid Responsivo
+     ========================================== */
+    --largura-maxima: 1200px; /* Largura máxima do layout */
+    --largura-conteudo: 960px; /* Largura do conteúdo */
+    --espaco-grid: 16px; /* Espaçamento entre os itens no grid */
+    --gutter-grid: 32px; /* Espaçamento entre colunas no grid */
+    --largura-container: 90vw; /* Largura do container em viewport */
+    --altura-section: 60vh; /* Altura da seção em viewport */
+
+       /* ==========================================
+        Z-Index
+     ========================================== */
+     --z-index-baixo: 10;
+     --z-index-normal: 100;
+     --z-index-alto: 1000;
+      
+     /* ==========================================
+         Transições e Animações
+      ========================================== */
+     --duracao-transicao: 0.3s; 
+     --duracao-animacao: 1s;
+     --timing-function: ease-in-out;
+     --delay-transicao: 0.2s;
+      
+
+     @media (min-width: 1200px) {
+        :root {
+            --tamanho-fonte-titulo: 3.5rem;
+            --tamanho-fonte-subtitulo: 2.5rem;
+            --tamanho-imagem-max: 80%;
+            --largura-container: 70vw;
+            --altura-section: 50vh;
+        }
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+        :root {
+            --tamanho-fonte-titulo: 2.5rem;
+            --tamanho-fonte-subtitulo: 2rem;
+            --tamanho-imagem-max: 90%;
+            --largura-container: 80vw;
+            --altura-section: 55vh;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        :root {
+            --tamanho-fonte-titulo: 2rem;
+            --tamanho-fonte-subtitulo: 1.5rem;
+            --tamanho-imagem-max: 100%;
+            --largura-container: 100vw;
+            --altura-section: 70vh;
+        }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Dancing Script', cursive; /* Fontes decorativas para títulos */
+    font-family: var(--fonte-secundaria); /* Fonte principal para os títulos */
+}
+/* ==========================================
+    Estilos do Cabeçalho
+========================================== */
+header {
+    background-color: var(--cor-primaria); /* Fundo com a cor primária */
+    padding: var(--espaco-medium) 0;
 }
 
-main {
-    max-width: 1024px;  /* Limita a largura máxima do conteúdo */
-    margin: 0 auto;     /* Centraliza o conteúdo */
+.navbar {
+    background-color: var(--cor-secundaria); /* Cor de fundo escura para a navbar */
+    border-radius: var(--bordas-arredondadas);
+    box-shadow: var(--sombra-suave);
+    width: auto; /* Ajuste para a largura não ocupar toda a tela */
+    max-width: var(--largura-conteudo); /* Largura máxima definida pela variável */
+    margin: 0 auto; /* Centraliza a navbar */
+    padding: 0 var(--espaco-medium); /* Adiciona padding nas laterais */
 }
 
-/* ===============================
-   Estilos do Header
-   =============================== */
-.main-header {
-    background-color: var(--cor-escuro);   /* Fundo escuro para o header */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar */
+.navbar .container {
+    width: 100%; /* Garantir que o conteúdo da navbar ocupe a largura disponível dentro do limite */
+    padding: 0; /* Remove padding extra */
 }
 
-/* ===============================
-   Estilos dos Cards de Contagem Regressiva
-   =============================== */
-.countdown-card {
-    background-color: var(--cor-escuro); /* Fundo escuro */
-    color: var(--cor-texto-claro);       /* Texto claro */
-    padding: 20px;
-    border-radius: 10px;                 /* Bordas arredondadas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
+.navbar-brand {
+    padding-left: var(--espaco-medium); /* Adiciona espaço à esquerda da logo */
+    padding-right: var(--espaco-medium); /* Adiciona espaço à direita da logo */
 }
 
-.countdown-card h4 {
-    font-size: 2rem;   /* Tamanho grande para os números */
-    font-weight: 700;   /* Peso da fonte */
+.navbar-brand img {
+    filter: brightness(0) invert(1);
 }
 
-.countdown-card p {
-    font-size: 1rem;    /* Tamanho de fonte menor para os rótulos */
-    color: var(--cor-secundaria); /* Cor do texto secundário */
+.navbar-nav {
+    padding-left: var(--espaco-medium); /* Adiciona espaço à esquerda dos links */
+    padding-right: var(--espaco-medium); /* Adiciona espaço à direita dos links */
+    display: flex; /* Faz os itens de navegação ficarem lado a lado */
+    justify-content: space-around; /* Distribui os itens com espaçamento */
+    flex-wrap: wrap; /* Permite que os itens se ajustem ao tamanho da tela */
 }
 
-#countdown-container {
-    margin-top: 40px; /* Distância para não colidir com outros elementos */
+/* Estilos para os links na barra de navegação */
+.navbar-nav .nav-item {
+    margin-right: var(--espaco-medium); /* Espaçamento entre os itens de navegação */
+    margin-bottom: var(--espaco-small); /* Adiciona margem inferior para melhor espaçamento */
 }
 
-/* ===============================
-   Estilos do Relogio
-   =============================== */
-
-/* ===============================
-   Estilos do Footer
-   =============================== */
-footer {
-    background-color: var(--cor-escuro); /* Fundo escuro para o footer */
-    color: var(--cor-texto-claro);  /* Texto claro no footer */
-    padding: 10px 0;
-    text-align: center;  /* Centraliza o texto no footer */
+.navbar-nav .nav-item .nav-link {
+    color: var(--cor-botao-texto); /* Cor branca para os links */
+    padding: var(--espaco-small) var(--espaco-medium);
+    transition: background-color var(--duracao-transicao), color var(--duracao-transicao);
 }
 
-/* ===============================
-   Estilos do Formulário
-   =============================== */
-.card {
-    border: none;
-    background: var(--cor-escuro);  /* Fundo escuro para os cards */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra leve */
-    color: var(--cor-texto-claro);   /* Texto claro */
-    padding: 20px;   /* Espaçamento interno */
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    background-color: var(--cor-botao-hover); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-botao-texto); /* Garante que o texto permaneça branco */
 }
 
-.card input, .card textarea {
-    border-radius: 10px;  /* Bordas arredondadas */
-    border: 1px solid #ddd;  /* Borda leve */
-    padding: 10px;      /* Espaçamento interno */
-    font-size: 1rem;    /* Tamanho de fonte */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra leve */
+.navbar-nav .nav-item .nav-link.active {
+    background-color: var(--cor-botao-texto); /* Cor de fundo para o link ativo */
+    color: var(--cor-primaria);
 }
 
-/* Efeito ao focar nos inputs */
-.card input:focus, .card textarea:focus {
-    outline: none;  /* Remove a borda padrão de foco */
-    border-color: var(--cor-primaria);  /* Borda em cor primária */
-    box-shadow: 0 0 5px rgba(214, 51, 108, 0.5);  /* Efeito de sombra */
+#login-toggle {
+    color: var(--cor-botao-texto);
+    padding: var(--espaco-small) var(--espaco-medium);
+    transition: background-color var(--duracao-transicao), color var(--duracao-transicao);
 }
 
-/* Estilos para os Botões */
-.card button {
-    border-radius: 25px;  /* Bordas arredondadas */
-    padding: 12px 20px;   /* Espaçamento interno */
-    font-size: 1.1rem;    /* Tamanho da fonte */
-    transition: all 0.3s ease;  /* Transição suave */
+#login-toggle:hover,
+#login-toggle:focus {
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-botao-texto);
 }
 
-/* Efeito de foco no botão */
-.card button:focus {
-    outline: none;   /* Remove o foco padrão */
-    box-shadow: 0 0 5px rgba(214, 51, 108, 0.5); /* Foco em cor primária */
-}
+/* ==========================================
+    Estilos Responsivos
+========================================== */
 
-/* ===============================
-   Estilos da Prévia Dinâmica
-   =============================== */
-   .preview-container {
-    background: linear-gradient(135deg, #272727 25%, #303030 75%); /* Fundo com efeito de papel */
-    border: 1px dashed #ccc; /* Borda tracejada para dar o efeito de "escrevendo" */
-    padding: 20px;         /* Espaçamento interno */
-    color: var(--cor-texto-claro);   /* Texto claro */
-    max-width: 800px;      /* Largura máxima */
-    margin: 0 auto;        /* Centraliza a prévia */
-    word-wrap: break-word; /* Quebra o texto caso ultrapasse a largura */
-    overflow-wrap: break-word; /* Garante a quebra do texto em todos os navegadores */
-    white-space: normal;   /* Permite a quebra automática de linha */
-}
-
-.titulo-preview {
-    font-family: 'Dancing Script', cursive;  /* Fonte decorativa */
-    font-size: 1.8rem;    /* Tamanho do título */
-    color: var(--cor-primaria);  /* Cor primária */
-    animation: typing 2s steps(40) 1s forwards, blink 0.75s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    transition: transform 0.3s ease; /* Transição suave */
-}
-
-/* Efeito de hover no título */
-.titulo-preview:hover {
-    transform: scale(1.05); /* Aumenta o título ao passar o mouse */
-}
-
-#mensagem-preview {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: var(--cor-texto-claro);
-    text-align: center;
-    animation: typing 3s steps(50) 1s forwards, blink 0.75s step-end infinite;
-    white-space: normal; /* Permite quebra de linha aqui também */
-    overflow-wrap: break-word; /* Quebra as palavras longas se necessário */
-}
-
-.text-muted {
-    color: var(--cor-secundaria) !important;  /* Cor mais clara para informações secundárias */
-}
-
-/* Animação de digitação 
-@keyframes typing {
-    from {
-        width: 0;
+/* Tela de 768px (tablets e telas maiores) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 85%; /* Navbar ocupa 85% da largura da tela */
     }
-    to {
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Os links ficam em coluna */
+        justify-content: center;
+        align-items: center; /* Centraliza os links */
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0; /* Adiciona margem entre os itens */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: var(--espaco-small) var(--espaco-medium); /* Ajusta o espaçamento */
+        text-align: center; /* Centraliza o texto */
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        font-size: 1.2rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+/* Tela de 425px (celulares pequenos) */
+@media (max-width: 425px) {
+    .navbar {
+        width: 90%; /* Navbar ocupa 90% da largura da tela */
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
+        text-align: center;
+        width: 100%;
+    }
+
+    #login-toggle {
+        font-size: 0.9rem;
+    }
+
+    .navbar-toggler {
+        font-size: 1.2rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+/* Tela de 375px (celulares menores) */
+@media (max-width: 375px) {
+    .navbar {
+        width: 95%; /* Navbar ocupa 95% da largura da tela */
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 0.85rem; /* Ajuste no tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
+        text-align: center;
+        width: 100%;
+    }
+
+    #login-toggle {
+        font-size: 0.85rem;
+    }
+
+    .navbar-toggler {
+        font-size: 1rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+/* Tela de 320px (celulares muito pequenos) */
+@media (max-width: 320px) {
+    .navbar {
+        width: 100%; /* Navbar ocupa 100% da largura da tela */
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 0.8rem; /* Ajuste no tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
+        text-align: center;
+        width: 100%;
+    }
+
+    #login-toggle {
+        font-size: 0.8rem;
+    }
+
+    .navbar-toggler {
+        font-size: 1rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+
+/* ==========================================
+    Estilos para a Barra de Progresso
+========================================== */
+main .progress {
+    background-color: var(--cor-fundo); /* Cor de fundo do progresso */
+    border-radius: var(--bordas-arredondadas); /* Bordas arredondadas */
+    height: 20px; /* Altura da barra de progresso */
+    box-shadow: var(--sombra-suave); /* Sombra suave */
+}
+
+#progress-bar {
+    background-color: var(--cor-primaria); /* Cor da barra de progresso */
+    border-radius: var(--bordas-arredondadas); /* Bordas arredondadas */
+    height: 100%; /* A barra de progresso ocupa toda a altura da seção */
+    transition: width var(--duracao-animacao) var(--timing-function); /* Animação de largura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main .progress {
+        height: 15px; /* Menor altura para telas pequenas */
+    }
+
+    #progress-bar {
+        height: 100%; /* Manter a altura da barra */
+    }
+}
+
+/* ==========================================
+    Estilos para a Seção de Etapas
+========================================== */
+section.card {
+    border-radius: var(--bordas-arredondadas); /* Bordas arredondadas na card */
+    box-shadow: var(--sombra-suave); /* Sombra suave */
+    background-color: var(--cor-fundo-claro); /* Cor de fundo clara */
+    padding: 20px;
+}
+
+/* Estilo do título */
+#step-titulo h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Estilo do parágrafo de descrição */
+#step-titulo p.texto-carinho {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Estilo do input */
+#step-titulo input.form-control {
+    border-radius: var(--bordas-arredondadas); /* Bordas arredondadas no input */
+    background-color: var(--cor-fundo-input); /* Cor de fundo clara para o input */
+    border: 2px solid var(--cor-primaria); /* Borda mais espessa e colorida */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Efeito de transição */
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#step-titulo input.form-control:focus {
+    border-color: var(--cor-secundaria); /* Borda muda quando o input é focado */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Efeito de sombra suave ao focar */
+}
+
+/* Contador de caracteres */
+#titulo-count {
+    font-size: 0.9rem;
+    color: var(--cor-texto); /* Cor do contador */
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Estilo do botão */
+#next-btn-1 {
+    background-color: var(--cor-secundaria); /* Cor do fundo do botão */
+    color: var(--cor-botao-texto); /* Cor do texto */
+    border-radius: var(--bordas-arredondadas); /* Bordas arredondadas */
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s; /* Efeitos de transição */
+    font-size: 1.1rem;
+}
+
+#next-btn-1:hover {
+    background-color: var(--cor-fundo-botao-hover); /* Cor do botão ao passar o mouse */
+    transform: translateY(-3px); /* Efeito de "levitação" */
+}
+
+#next-btn-1:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--cor-secundaria); /* Efeito de foco no botão */
+}
+
+/* Responsividade para telas de até 768px */
+@media (max-width: 768px) {
+    section.card {
+        padding: 15px; /* Menos padding para otimizar o uso do espaço */
+    }
+
+    #step-titulo h3 {
+        font-size: 1.6rem; /* Ajuste de tamanho do título */
+    }
+
+    #step-titulo p.texto-carinho {
+        font-size: 0.9rem; /* Ajuste de tamanho da descrição */
+    }
+
+    #step-titulo input.form-control {
+        padding: 8px; /* Reduzir padding do input */
+        font-size: 0.95rem; /* Ajuste de fonte */
+    }
+
+    #next-btn-1 {
+        font-size: 1rem; /* Ajuste de tamanho do botão */
+        padding: 10px; /* Ajuste de padding */
+    }
+
+    #titulo-count {
+        font-size: 0.85rem; /* Ajuste de tamanho do contador */
+    }
+}
+
+/* Responsividade para telas de 425px */
+@media (max-width: 425px) {
+    section.card {
+        padding: 12px; /* Menos padding para telas menores */
+    }
+
+    #step-titulo h3 {
+        font-size: 1.4rem; /* Ajuste de tamanho do título */
+    }
+
+    #step-titulo p.texto-carinho {
+        font-size: 0.85rem; /* Ajuste de tamanho da descrição */
+    }
+
+    #step-titulo input.form-control {
+        padding: 7px; /* Menos padding no input */
+        font-size: 0.9rem; /* Ajuste de tamanho da fonte */
+    }
+
+    #next-btn-1 {
+        font-size: 0.95rem; /* Ajuste de tamanho do botão */
+        padding: 8px; /* Ajuste de padding */
+    }
+
+    #titulo-count {
+        font-size: 0.75rem; /* Ajuste no contador de caracteres */
+    }
+}
+
+/* Responsividade para telas de 375px */
+@media (max-width: 375px) {
+    section.card {
+        padding: 10px; /* Menos padding para telas muito pequenas */
+    }
+
+    #step-titulo h3 {
+        font-size: 1.3rem; /* Ajuste de tamanho do título */
+    }
+
+    #step-titulo p.texto-carinho {
+        font-size: 0.8rem; /* Ajuste de tamanho da descrição */
+    }
+
+    #step-titulo input.form-control {
+        padding: 6px; /* Menos padding no input */
+        font-size: 0.85rem; /* Ajuste de tamanho da fonte */
+    }
+
+    #next-btn-1 {
+        font-size: 0.9rem; /* Ajuste de tamanho do botão */
+        padding: 7px; /* Ajuste de padding */
+    }
+
+    #titulo-count {
+        font-size: 0.7rem; /* Ajuste no contador de caracteres */
+    }
+}
+
+/* Responsividade para telas de 320px */
+@media (max-width: 320px) {
+    section.card {
+        padding: 5px; /* Menos padding para telas muito pequenas */
+    }
+
+    #step-titulo h3 {
+        font-size: 1.2rem; /* Ajuste de tamanho do título */
+    }
+
+    #step-titulo p.texto-carinho {
+        font-size: 0.75rem; /* Ajuste de tamanho da descrição */
+    }
+
+    #step-titulo input.form-control {
+        padding: 5px; /* Menos padding no input */
+        font-size: 0.8rem; /* Ajuste de tamanho da fonte */
+    }
+
+    #next-btn-1 {
+        font-size: 0.85rem; /* Ajuste de tamanho do botão */
+        padding: 6px; /* Ajuste de padding */
+    }
+
+    #titulo-count {
+        font-size: 0.6rem; /* Ajuste no contador de caracteres */
+    }
+}
+
+
+/* ==========================================
+    Estilos para a Etapa 2
+========================================== */
+#step-mensagem {
+    text-align: center;
+}
+
+/* Título */
+#step-mensagem h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Texto carinhoso */
+#step-mensagem p.texto-carinho {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Estilo da área de texto */
+#mensagem {
+    border-radius: var(--bordas-arredondadas);
+    background-color: var(--cor-fundo-input);
+    border: 2px solid var(--cor-primaria);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 10px;
+    font-size: 1rem;
+    resize: none;
+    width: 100%;
+}
+
+#mensagem:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Contador de caracteres */
+#mensagem-count {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Container dos botões */
+#buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+/* Estilo dos botões */
+#back-btn-1, #next-btn-2 {
+    flex: 1; /* Faz os botões crescerem igualmente */
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 130px;
+}
+
+#back-btn-1 {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+#back-btn-1:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    transform: translateY(-3px);
+}
+
+#next-btn-2 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+}
+
+#next-btn-2:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+}
+
+@media (max-width: 425px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+
+    #back-btn-1, #next-btn-2 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+
+    #back-btn-1, #next-btn-2 {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons-container {
+        flex-direction: column; /* Em telas muito pequenas, empilha os botões */
+        gap: 5px;
+    }
+
+    #back-btn-1, #next-btn-2 {
         width: 100%;
     }
 }
 
-/* Efeito de cursor piscando 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-*/
-/* ===============================
-   Responsividade
-   =============================== */
-@media (max-width: 768px) {
-    /* Ajustes no logo */
-    .logo-text {
-        font-size: 1.5rem;
-        text-align: center;   /* Centraliza o logo */
-        margin: 0 auto;
-    }
-
-    /* Ajustes no menu de navegação */
-    .navbar-light .navbar-nav {
-        text-align: center;   /* Centraliza os itens */
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .navbar-light .navbar-nav .nav-item {
-        margin: 0;  /* Remove margens laterais */
-    }
-
-    .navbar-light .navbar-nav .nav-link {
-        font-size: 1rem;   /* Ajuste de tamanho da fonte */
-        padding: 10px;     /* Melhor espaçamento nos itens */
-    }
-
-    .navbar-toggler {
-        margin-left: auto;  /* Alinha o botão à direita */
-    }
-
-    /* Ajustes para o botão "Assinar" */
-    .nav-menu .btn-assinar {
-        margin-top: 10px;  /* Adiciona margem superior */
-    }
-}
- /* ===============================
-   Estilo para o container do upload
-   =============================== */ 
-.upload-container {
-    position: relative;
+/* ==========================================
+    Estilos para a Etapa 3
+========================================== */
+#step-foto {
     text-align: center;
 }
 
-/* Estilo para a caixa de upload */
+/* Título */
+#step-foto h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Texto de instrução */
+#step-foto p {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Container de Upload */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do campo de upload */
 .upload-box {
-    display: inline-block;
     width: 100%;
-    max-width: 300px;
-    height: 150px;
-    border: 2px dashed var(--cor-primaria);  /* Usando a cor primária para a borda */
-    border-radius: 10px;
-    padding: 20px;
+    max-width: 350px;
+    padding: 15px;
+    background-color: var(--cor-fundo-input);
+    border: 2px dashed var(--cor-primaria);
+    border-radius: var(--bordas-arredondadas);
+    text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Estilo do texto dentro do retângulo */
-.upload-box .upload-text {
-    font-size: 16px;
-    color: var(--cor-primaria);   /* Cor primária para o texto */
-    font-weight: bold;
+.upload-box:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    border-color: var(--cor-secundaria);
 }
 
-/* Estilo para a informação sobre os tipos de arquivo */
-.upload-box .upload-info {
+/* Texto dentro da caixa de upload */
+.upload-text {
+    font-size: 1rem;
+    font-weight: 600;
     display: block;
-    font-size: 12px;
-    color: var(--cor-secundaria);  /* Cor secundária para o texto informativo */
-    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
 }
 
-/* Estilo para o input de arquivo invisível */
-input[type="file"] {
-    display: none;
+.upload-info {
+    font-size: 0.85rem;
+    color: var(--cor-secundaria);
 }
 
-/* Estilo para as imagens carregadas dentro da caixa de upload */
-.upload-preview {
+/* Container da prévia das imagens */
+#foto-preview-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--bordas-arredondadas);
+    background-color: var(--cor-fundo-claro);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Imagens pré-visualizadas */
+#foto-preview {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 10px;
-    max-height: 80px;
-    overflow: auto;
+    justify-content: center;
 }
 
-/* Estilo para as imagens exibidas */
-.upload-preview img {
-    max-width: 60px;
-    max-height: 60px;
-    border-radius: 5px;
+#foto-preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--bordas-arredondadas);
+    border: 2px solid var(--cor-primaria);
 }
 
-/* Estilo para o botão de exclusão das imagens */
-.upload-preview .delete-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 5px;
+/* Botões */
+#back-btn-2, #next-btn-3 {
+    flex: 1;
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 130px;
+}
+
+#back-btn-2 {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+#back-btn-2:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    transform: translateY(-3px);
+}
+
+#next-btn-3 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+}
+
+#next-btn-3:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+
+    .upload-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+
+    #back-btn-2, #next-btn-3 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #foto-preview img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 375px) {
+    #buttons-container {
+        flex-direction: row; /* Mantém os botões lado a lado */
+    }
+
+    #back-btn-2, #next-btn-3 {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    #foto-preview img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons-container {
+        flex-direction: column; /* Em telas muito pequenas, empilha os botões */
+        gap: 5px;
+    }
+
+    #back-btn-2, #next-btn-3 {
+        width: 100%;
+    }
+
+    #foto-preview img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ==========================================
+    Estilos para a Etapa 4 (Vídeo)
+========================================== */
+#step-video {
+    text-align: center;
+}
+
+/* Título */
+#step-video h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Texto de instrução */
+#step-video p {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Container de Upload */
+.video-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do campo de upload */
+.video-upload-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: var(--cor-fundo-input);
+    border: 2px dashed var(--cor-primaria);
+    border-radius: var(--bordas-arredondadas);
+    text-align: center;
     cursor: pointer;
-    font-size: 14px;
+    transition: all 0.3s ease-in-out;
 }
 
+.video-upload-box:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    border-color: var(--cor-secundaria);
+}
 
+/* Texto dentro da caixa de upload */
+.video-upload-text {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+}
 
+.video-upload-info {
+    font-size: 0.85rem;
+    color: var(--cor-secundaria);
+}
 
+/* Prévia do vídeo */
+#video-preview-container {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--bordas-arredondadas);
+    background-color: var(--cor-fundo-claro);
+    box-shadow: var(--sombra-suave);
+}
+
+#video-preview {
+    width: 100%;
+    max-width: 350px;
+    border-radius: var(--bordas-arredondadas);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Botões */
+#back-btn-3, #next-btn-4 {
+    flex: 1;
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 130px;
+}
+
+#back-btn-3 {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+#back-btn-3:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    transform: translateY(-3px);
+}
+
+#next-btn-4 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+}
+
+#next-btn-4:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .video-upload-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    #back-btn-3, #next-btn-4 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    #back-btn-3, #next-btn-4 {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons-container {
+        flex-direction: column; /* Empilha os botões em telas ultra pequenas */
+        gap: 5px;
+    }
+
+    #back-btn-3, #next-btn-4 {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+    Estilos para a Etapa 5 (Música)
+========================================== */
+#step-musica {
+    text-align: center;
+}
+
+/* Título */
+#step-musica h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Texto de instrução */
+#step-musica p {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Container de Upload */
+.music-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do campo de upload */
+.music-upload-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: var(--cor-fundo-input);
+    border: 2px dashed var(--cor-primaria);
+    border-radius: var(--bordas-arredondadas);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.music-upload-box:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    border-color: var(--cor-secundaria);
+}
+
+/* Texto dentro da caixa de upload */
+.music-upload-text {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--cor-primaria);
+}
+
+.music-upload-info {
+    font-size: 0.85rem;
+    color: var(--cor-secundaria);
+}
+
+/* Prévia da música */
+#music-preview-container {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--bordas-arredondadas);
+    background-color: var(--cor-fundo-claro);
+    box-shadow: var(--sombra-suave);
+}
+
+#music-preview {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Botões */
+#back-btn-4, #next-btn-5 {
+    flex: 1;
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 130px;
+}
+
+#back-btn-4 {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+#back-btn-4:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    transform: translateY(-3px);
+}
+
+#next-btn-5 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+}
+
+#next-btn-5:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .music-upload-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    #back-btn-4, #next-btn-5 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    #back-btn-4, #next-btn-5 {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons-container {
+        flex-direction: column; /* Empilha os botões em telas ultra pequenas */
+        gap: 5px;
+    }
+
+    #back-btn-4, #next-btn-5 {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+    Estilos para a Etapa Final
+========================================== */
+#step-final {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--cor-fundo-claro);
+    border-radius: var(--bordas-arredondadas);
+    box-shadow: var(--sombra-suave);
+}
+
+/* Título */
+#step-final h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* Ícone de conclusão */
+#step-final .icon-success {
+    font-size: 4rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* Animação do ícone */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+/* Mensagem de agradecimento */
+#step-final p {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Botão de ação final */
+#step-final .btn-finish {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#step-final .btn-finish:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 425px) {
+    #step-final h2 {
+        font-size: 1.6rem;
+    }
+    
+    #step-final .icon-success {
+        font-size: 3.5rem;
+    }
+
+    #step-final .btn-finish {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* ==========================================
+    Estilos para a Pré-visualização com Fundo
+========================================== */
+.preview-container {
+    background-color: var(--cor-fundo-claro); /* Cor de fundo clara */
+    border-radius: var(--bordas-arredondadas);
+    box-shadow: var(--sombra-suave); /* Sombra suave */
+    padding: 30px;
+    max-width: 800px;
+    word-wrap: break-word;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #f0f4f8, #dbe2e8); /* Fundo com gradiente suave */
+    position: relative;
+    border-top: 4px solid #34495E; /* Borda superior com o cinza azulado */
+}
+
+/* Título da pré-visualização */
+.titulo-preview {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #34495E; /* Cor cinza azulado */
+    margin-bottom: 15px;
+    letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
+}
+
+/* Texto da mensagem */
+#mensagem-preview {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria); /* Mantém o cinza escuro da cor secundária */
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor legibilidade */
+}
+
+/* Seção das fotos */
+#foto-preview-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px; /* Adiciona um espaço extra no topo */
+}
+
+/* Estilização das imagens dentro da pré-visualização */
+#foto-preview-section img {
+    border-radius: var(--bordas-arredondadas);
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse nas imagens */
+#foto-preview-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada */
+}
+
+/* Adicionando um ícone de "upload" flutuante, que pode ser opcional */
+.preview-container::after {
+    content: url('assets/img/icons/upload-icon.svg'); /* Adicionar o ícone desejado */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .preview-container {
+        padding: 20px;
+    }
+
+    .titulo-preview {
+        font-size: 1.5rem;
+    }
+
+    #mensagem-preview {
+        font-size: 1rem;
+    }
+
+    #foto-preview-section img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 425px) {
+    .preview-container {
+        padding: 15px;
+    }
+
+    .titulo-preview {
+        font-size: 1.3rem;
+    }
+
+    #mensagem-preview {
+        font-size: 0.95rem;
+    }
+
+    #foto-preview-section img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}

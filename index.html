@@ -2,43 +2,59 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Definição do charset, para garantir a compatibilidade com caracteres especiais -->
+          <!-- Definição do charset, para garantir a compatibilidade com caracteres especiais -->
     <meta charset="UTF-8">
     
     <!-- Viewport para garantir que o site seja responsivo em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Título da página, o título é fundamental para SEO e experiência do usuário -->
-    <title>MomenTB</title>
+    <!-- Título da página -->
+    <title>MomenTB - Crie e Compartilhe Momentos Especiais</title>
 
     <!-- Meta descrição para SEO -->
     <meta name="description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
 
-    <!-- Meta tags para otimização em redes sociais (Open Graph para Facebook, Twitter, etc.) -->
-    <meta property="og:title" content="Momentos Incríveis">
-    <meta property="og:description" content="Crie momentos especiais com fotos, vídeos, músicas e mensagens dedicadas. Veja sua criação e compartilhe facilmente.">
-    <meta property="og:image" content="URL_da_imagem_de_preview">
-    <meta property="og:url" content="URL_do_site">
+    <!-- Meta tags para SEO e otimização em redes sociais (Open Graph e Twitter Cards) -->
+    <meta property="og:title" content="MomenTB - Momentos Incríveis">
+    <meta property="og:description" content="Transforme momentos em memórias inesquecíveis com fotos, vídeos e músicas. Crie, personalize e compartilhe seu momento especial agora!">
+    <meta property="og:image" content="URL_da_imagem_de_preview">  <!-- Atualizar com URL real -->
+    <meta property="og:url" content="https://www.momentb.com">      <!-- Atualizar com URL real -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MomenTB - Momentos Especiais">
+    <meta name="twitter:description" content="Transforme momentos em memórias inesquecíveis com fotos, vídeos e músicas.">
+    <meta name="twitter:image" content="URL_da_imagem_de_preview">  <!-- Atualizar com URL real -->
 
-    <!-- Favicon: ícone que aparece na aba do navegador -->
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Meta tag para otimizar o tema da barra superior em navegadores móveis -->
+    <meta name="theme-color" content="#ff69b4">
 
-    <!-- Google Fonts (tipografia moderna para um visual bacana) -->
+    <!-- Meta tag para iOS (para tornar o site compatível com tela cheia quando salvo na home screen do iPhone) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon: ícones para desktop, dispositivos móveis e favicon padrão -->
+    <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    
+    <!-- Google Fonts (Dancing Script e Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     
     <!-- Bootstrap para estilos prontos e responsividade -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons para ícones, como a adição de ícones nos botões de navegação ou interações -->
+    <!-- Bootstrap Icons para adicionar ícones prontos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Link para o arquivo CSS próprio do projeto -->
+    <!-- Link para os arquivos CSS próprios do projeto -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+   
 </head>
 
-<body class="bg-dark text-white">
+<body>
     <header>
         <!-- Barra de Navegação -->
         <nav class="navbar navbar-expand-lg navbar-dark shadow">
@@ -59,12 +75,47 @@
                         <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
-                        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#"><i class="bi bi-gift-fill me-2"></i>Login</a></li>
+                        <!-- Menu de Login -->
+                        <li class="nav-item">
+                            <!-- Botão de Login -->
+                            <a class="nav-link d-flex align-items-center" href="#" id="login-toggle">
+                                <i class="bi bi-gift-fill me-2"></i>Login
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulário de login -->
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nome de usuário</label>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu nome de usuário" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                            <a href="#" class="text-muted">Esqueceu a senha?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <main class="container my-5">
         <!-- Barra de Progresso (Etapas) -->
@@ -147,7 +198,7 @@
         </section>
     
         <!-- Pré-visualização sem botões -->
-        <section class="preview-container bg-dark rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
+        <section class="preview-container rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
             <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui</h2>
             <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui</p>
 
@@ -157,7 +208,7 @@
 
     </main>
     
-    <footer class="bg-dark text-center py-3">
+    <footer class="text-center py-3">
         <p class="text-muted">© 2025 Momentos Incríveis - Todos os direitos reservados</p>
     </footer>
     
@@ -167,7 +218,7 @@
     <script src="assets/js/preview.js"></script>
     <script src="assets/js/caracteres.js"></script>
     <script src="assets/js/previsializacaofotos.js"></script>
-    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
