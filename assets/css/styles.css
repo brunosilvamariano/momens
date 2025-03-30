@@ -1332,3 +1332,52 @@ section.card {
         max-height: 100px;
     }
 }
+
+/* ==========================================
+    Estilos para o Rodapé
+========================================== */
+footer {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    border-top: 2px solid var(--cor-primaria);
+}
+
+/* Links de Redes Sociais */
+.social-icons a {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Links de Navegação do Rodapé */
+.footer-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Estilo de Padding e Separação do Conteúdo */
+footer .container {
+    padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .social-icons {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+}
