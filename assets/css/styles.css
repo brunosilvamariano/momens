@@ -248,7 +248,7 @@ header {
     }
 
     .navbar-nav .nav-item .nav-link {
-        padding: var(--espaco-small) var(--espaco-medium); /* Ajusta o espaçamento */
+        padding: var(--espaco-medium) var(--espaco-medium); /* Ajusta o espaçamento */
         text-align: center; /* Centraliza o texto */
         width: 100%;
     }
