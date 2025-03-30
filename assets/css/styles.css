@@ -868,6 +868,8 @@ section.card {
 /* ==========================================
     Estilos para a Etapa 4 (Vídeo)
 ========================================== */
+
+/* Container da Etapa 4 */
 #step-video {
     text-align: center;
 }
@@ -888,7 +890,7 @@ section.card {
     margin-bottom: 20px;
 }
 
-/* Container de Upload */
+/* Container de Upload de Vídeo */
 .video-upload-container {
     display: flex;
     justify-content: center;
@@ -896,7 +898,7 @@ section.card {
     margin-bottom: 20px;
 }
 
-/* Estilo do campo de upload */
+/* Estilo do campo de upload de vídeo */
 .video-upload-box {
     width: 100%;
     max-width: 400px;
@@ -907,14 +909,16 @@ section.card {
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin: 0 auto;
 }
 
+/* Estilo ao passar o mouse */
 .video-upload-box:hover {
     background-color: var(--cor-fundo-botao-hover);
     border-color: var(--cor-secundaria);
 }
 
-/* Texto dentro da caixa de upload */
+/* Texto dentro da caixa de upload de vídeo */
 .video-upload-text {
     font-size: 1rem;
     font-weight: 600;
@@ -923,14 +927,15 @@ section.card {
     color: var(--cor-primaria);
 }
 
+/* Informações sobre o arquivo de vídeo */
 .video-upload-info {
     font-size: 0.85rem;
     color: var(--cor-secundaria);
 }
 
-/* Prévia do vídeo */
+/* Pré-visualização do vídeo */
 #video-preview-container {
-    display: none;
+    display: none; /* Inicialmente invisível */
     margin-top: 20px;
     padding: 15px;
     border-radius: var(--bordas-arredondadas);
@@ -938,14 +943,15 @@ section.card {
     box-shadow: var(--sombra-suave);
 }
 
+/* Ajustes do vídeo */
 #video-preview {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%; /* O vídeo ocupará a largura total */
     border-radius: var(--bordas-arredondadas);
     box-shadow: var(--sombra-suave);
 }
 
-/* Botões */
+/* Botões (Voltar e Próxima Etapa) */
 #back-btn-3, #next-btn-4 {
     flex: 1;
     border-radius: var(--bordas-arredondadas);
@@ -1383,3 +1389,4 @@ footer .container {
         font-size: 0.9rem;
     }
 }
+
