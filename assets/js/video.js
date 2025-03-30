@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Função para atualizar a pré-visualização do vídeo
     function updateVideoPreview() {
         const videoInput = document.getElementById('video-upload');
-        const videoPreviewSection = document.getElementById('video-preview-section');
+        const videoPreviewContainer = document.getElementById('video-preview-container');
         const videoElement = document.getElementById('video-preview');
         const videoSource = document.getElementById('video-source');
 
@@ -13,12 +13,22 @@ document.addEventListener('DOMContentLoaded', function () {
             videoElement.load(); // Carrega a nova fonte no vídeo
 
             // Exibe a seção de pré-visualização do vídeo
-            videoPreviewSection.style.display = 'block';
+            videoPreviewContainer.style.display = 'block';
         } else {
             // Se não for um vídeo, esconda a pré-visualização
-            videoPreviewSection.style.display = 'none';
+            videoPreviewContainer.style.display = 'none';
         }
     }
+
+    // Função para controle dos botões de navegação
+    document.getElementById('back-btn-3').addEventListener('click', function () {
+        document.getElementById('step-video').style.display = 'none';
+        // Aqui você pode mostrar a etapa anterior, se necessário
+    });
+
+    document.getElementById('next-btn-4').addEventListener('click', function () {
+        // A lógica para avançar para a próxima etapa
+    });
 
     // Atualiza a pré-visualização quando o vídeo for selecionado
     document.getElementById('video-upload').addEventListener('change', updateVideoPreview);
