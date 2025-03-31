@@ -1171,6 +1171,253 @@ section.card {
 }
 
 /* ==========================================
+    Estilos para a Etapa 6 (Seleção da Data)
+========================================== */
+/* Estilo da Etapa 6 - Seleção da Data */
+#step-data {
+    text-align: center;
+}
+
+/* Título */
+#step-data h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+/* Texto de instrução */
+#step-data p {
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Campo de Seleção de Data */
+#data-selecao {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    background-color: var(--cor-fundo-input);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--bordas-arredondadas);
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+/* Estilo ao passar o mouse */
+#data-selecao:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    border-color: var(--cor-secundaria);
+}
+
+/* Botões (Voltar e Próxima Etapa) */
+#back-btn-5, #next-btn-6 {
+    flex: 1;
+    border-radius: var(--bordas-arredondadas);
+    padding: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    text-align: center;
+    min-width: 130px;
+}
+
+#back-btn-5 {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-botao-texto);
+}
+
+#back-btn-5:hover {
+    background-color: var(--cor-fundo-botao-hover);
+    transform: translateY(-3px);
+}
+
+#next-btn-6 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-botao-texto);
+}
+
+#next-btn-6:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #data-selecao {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    #back-btn-5, #next-btn-6 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    #back-btn-5, #next-btn-6 {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    #buttons-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #back-btn-5, #next-btn-6 {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+    Estilos para os Cards de Data
+========================================== */
+.data-card {
+    background-color: var(--cor-fundo-claro);
+    border-radius: var(--bordas-arredondadas);
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 15px; /* Garantir espaço entre os cards */
+}
+
+.data-card p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin: 0;
+}
+
+.data-card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+#data-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#data-completa p {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+}
+
+/* Responsividade para 768px (Tablet) */
+@media (max-width: 768px) {
+    .data-card {
+        width: 90px; /* Ajusta o tamanho dos cards para tablets */
+    }
+    .data-card p {
+        font-size: 1.6rem; /* Ajusta o tamanho da fonte dos números */
+    }
+    .data-card h5 {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte dos títulos */
+    }
+    #data-preview-container {
+        justify-content: center; /* Centraliza os cards */
+        gap: 15px;
+    }
+    #data-completa p {
+        font-size: 1rem; /* Reduz a fonte da data completa */
+    }
+}
+
+/* Responsividade para 425px (Celular maior) */
+@media (max-width: 425px) {
+    .data-card {
+        width: 80px; /* Ajuste para telas de celulares maiores */
+    }
+    .data-card p {
+        font-size: 1.4rem; /* Reduz o tamanho da fonte dos números */
+    }
+    .data-card h5 {
+        font-size: 0.85rem; /* Ajusta o título para telas menores */
+    }
+    #data-preview-container {
+        justify-content: center; /* Centraliza os cards */
+        gap: 10px; /* Reduz o espaço entre os cards */
+    }
+    #data-completa p {
+        font-size: 0.95rem; /* Reduz a fonte da data completa */
+    }
+}
+
+/* Responsividade para 375px (Celular médio) */
+@media (max-width: 375px) {
+    .data-card {
+        width: 70px; /* Ajuste para telas menores */
+    }
+    .data-card p {
+        font-size: 1.2rem; /* Fonte ainda menor para os números */
+    }
+    .data-card h5 {
+        font-size: 0.75rem; /* Tamanho do título reduzido */
+    }
+    #data-preview-container {
+        justify-content: center;
+        gap: 8px; /* Reduz o espaço entre os cards */
+    }
+    #data-completa p {
+        font-size: 0.9rem; /* Reduz a fonte da data completa */
+    }
+}
+
+/* Responsividade para 320px (Celular pequeno) */
+@media (max-width: 320px) {
+    .data-card {
+        width: 60px; /* Ajusta para telas muito pequenas */
+    }
+    .data-card p {
+        font-size: 1rem; /* Fonte bem pequena para números */
+    }
+    .data-card h5 {
+        font-size: 0.7rem; /* Tamanho dos títulos bem menor */
+    }
+    #data-preview-container {
+        justify-content: center;
+        gap: 5px; /* Espaço bem pequeno entre os cards */
+    }
+    #data-completa p {
+        font-size: 0.85rem; /* Ajusta a fonte da data completa */
+    }
+}
+
+/* Responsividade para a exibição da data completa em telas pequenas */
+@media (max-width: 768px) {
+    #data-completa p {
+        font-size: 1rem; /* Reduz a fonte da data completa */
+    }
+}
+
+#hora-brasilia-container p {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+    font-style: italic;
+}
+
+#titulo-compartilhando {
+    display: none; /* Mantém oculto até que a data seja selecionada */
+    width: 100%;   /* Garante que a div ocupe toda a largura */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+/* ==========================================
     Estilos para a Etapa Final
 ========================================== */
 #step-final {
@@ -1353,6 +1600,14 @@ section.card {
         max-height: 100px;
     }
 }
+
+
+
+
+
+
+
+
 
 /* ==========================================
     Estilos para o Rodapé

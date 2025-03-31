@@ -134,7 +134,7 @@
                 <p id="titulo-count" class="text-muted text-center">0/50 caracteres</p>
                 <button id="next-btn-1" class="btn btn-primary w-100">Próxima Etapa ➡️</button>
             </div>
-
+    
             <!-- Etapa 2 -->
             <div id="step-mensagem" style="display: none;">
                 <h3 class="text-center">Escreva uma Mensagem</h3>
@@ -146,11 +146,12 @@
                     <button id="next-btn-2" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
-           <!-- Etapa 3 -->
+    
+            <!-- Etapa 3 -->
             <div id="step-foto" style="display: none;">
                 <h3 class="text-center">Escolha até 8 Fotos</h3>
                 <p class="text-center text-muted mb-3">Selecione até 8 fotos ou gifs para complementar a sua página.</p>
-
+    
                 <!-- Estilo personalizado para o campo de upload -->
                 <div class="upload-container d-flex justify-content-center mb-3">
                     <label for="foto-upload" class="upload-box">
@@ -159,18 +160,18 @@
                     </label>
                     <input type="file" id="foto-upload" class="form-control" accept="image/gif, image/jpeg, image/jpg, image/png" multiple style="display: none;" aria-label="Upload de fotos">
                 </div>
-
+    
                 <div id="foto-preview-container" class="d-none text-center">
                     <h5>Prévia das Imagens:</h5>
                     <div id="foto-preview" class="d-flex flex-wrap justify-content-center"></div> <!-- Pré-visualização lado a lado com botões -->
                 </div>
-
+    
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3">
                     <button id="back-btn-2" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                     <button id="next-btn-3" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
-            
+    
             <!-- Etapa 4 - Seção para selecionar o vídeo -->
             <div id="step-video" style="display: none;">
                 <h3 class="text-center">Escolha um Vídeo</h3>
@@ -184,14 +185,14 @@
                         <small class="video-upload-info">Somente arquivos de vídeo (MP4, AVI, MKV, etc.) são permitidos.</small>
                     </label>
                 </div>
-
+    
                 <!-- Botões para navegação -->
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-3">
                     <button id="back-btn-3" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                     <button id="next-btn-4" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
-
+    
             <!-- Etapa 5 - Escolha da Música -->
             <div id="step-musica" style="display: none;">
                 <h3 class="text-center">Escolha uma Música</h3>
@@ -208,21 +209,110 @@
                         </label>
                     </div>
                 </div>
-
+    
                 <!-- Botões de navegação -->
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
                     <button id="back-btn-4" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
-                    <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Finalizar 🎉</button>
+                    <button id="next-btn-5" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+    
+            <!-- Etapa 6 - Seleção da Data -->
+            <div id="step-data" style="display: none;">
+                <h3 class="text-center">Escolha uma Data</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Selecione uma data importante para o momento.</p>
+                <input type="date" id="data-selecao" class="form-control mb-3">
+                
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-5" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-6" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+
+            <!-- Etapa 7 - Escolha de Animações ou Imagens de Fundo -->
+            <div id="step-fundo" style="display: none;">
+                <h3 class="text-center">Escolha Animações ou Imagens de Fundo</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Selecione uma animação ou imagem para personalizar sua página.</p>
+                <select id="fundo-selecao" class="form-control mb-3">
+                    <option value="">Selecione um fundo</option>
+                    <option value="fundo1">Fundo 1</option>
+                    <option value="fundo2">Fundo 2</option>
+                    <!-- Mais opções aqui -->
+                </select>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-6" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-7" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+    
+            <!-- Etapa 8 - Visualização -->
+            <div id="step-visualizacao" style="display: none;">
+                <h3 class="text-center">Visualize Sua Página</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Veja como sua página ficará com todas as seleções feitas.</p>
+                <!-- Aqui você pode adicionar uma pré-visualização dinâmica -->
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-7" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-8" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+                    <!-- Etapa 9 - Pagamento -->
+            <div id="step-pagamento" style="display: none;">
+                <h3 class="text-center">Pagamento</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Finalize a sua compra para criar sua página personalizada.</p>
+                <!-- Seção de pagamento (pode ser integração com algum serviço de pagamento, como Stripe ou PayPal) -->
+                <div class="form-group mb-3">
+                    <label for="payment-method" class="text-muted">Escolha o método de pagamento:</label>
+                    <select id="payment-method" class="form-control">
+                        <option value="credit-card">Cartão de Crédito</option>
+                        <option value="paypal">PayPal</option>
+                        <!-- Mais opções de pagamento podem ser adicionadas -->
+                    </select>
+                </div>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-8" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-9" class="btn btn-primary w-100 w-sm-auto">Finalizar Pagamento ➡️</button>
+                </div>
+            </div>
+
+            <!-- Etapa 10 - Gerar Link -->
+            <div id="step-link" style="display: none;">
+                <h3 class="text-center">Gerar Link</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Clique no botão abaixo para gerar o link da sua página personalizada.</p>
+                <!-- Botão para gerar o link -->
+                <button id="generate-link-btn" class="btn btn-success w-100 w-sm-auto">Gerar Link ➡️</button>
+                <div id="generated-link" class="mt-3" style="display: none;">
+                    <p class="text-center">Aqui está o link da sua página: <a href="#" id="user-link" target="_blank">Clique para acessar</a></p>
+                </div>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-9" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-10" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+
+            <!-- Etapa 11 - Gerar QR Code -->
+            <div id="step-qrcode" style="display: none;">
+                <h3 class="text-center">Gerar QR Code</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Gere um QR Code para que outras pessoas possam acessar a sua página com facilidade.</p>
+                <!-- Botão para gerar o QR Code -->
+                <button id="generate-qrcode-btn" class="btn btn-warning w-100 w-sm-auto">Gerar QR Code ➡️</button>
+                <div id="qrcode-container" class="mt-3" style="display: none;">
+                    <p class="text-center">Escaneie o QR Code abaixo para acessar a sua página:</p>
+                    <div id="qrcode"></div> <!-- Aqui o QR Code será exibido -->
+                </div>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-10" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-11" class="btn btn-primary w-100 w-sm-auto">Finalizar ➡️</button>
                 </div>
             </div>
 
             <!-- Etapa Final -->
             <div id="step-final" style="display: none;">
                 <h2 class="text-center">Você concluiu todas as etapas!</h2>
+                <p class="text-center">Sua página personalizada foi criada com sucesso! Parabéns!</p>
             </div>
         </section>
 
-        <!-- Seção de Pré-visualização Geral -->
+       <!-- Seção de Pré-visualização Geral -->
         <section class="preview-container rounded shadow-sm p-4 mx-auto" style="max-width: 800px; word-wrap: break-word;">
             <h2 id="titulo-preview" class="titulo-preview text-center mb-3">Seu Título Aparecerá Aqui</h2>
             <p id="mensagem-preview" class="text-center">Sua mensagem dedicada aparecerá aqui</p>
@@ -241,17 +331,70 @@
 
             <!-- Seção para exibir a pré-visualização da música -->
             <div id="audio-preview-container" class="text-center mb-3" style="display: none;">
-                <h4>A trilha dos nossos sentimentos</h4>
+                <h4>Uma trilha sonora para nossas emoções</h4>
                 <audio id="audio-preview" controls style="border-radius: var(--bordas-arredondadas); width: 100%; max-width: 100%;">
                     <source id="audio-preview-source" src="" type="audio/mp3" />
                     Seu navegador não suporta o áudio.
                 </audio>
                 <p id="audio-preview-name" class="mt-2 text-muted">Nome da música</p>
             </div>
+
+           <!-- Seção para exibir a pré-visualização da data -->
+            <div id="data-preview-container" class="d-flex justify-content-between gap-3 mt-4" style="display: none;">
+                <!-- Título "Compartilhando momentos há..." -->
+                <div id="titulo-compartilhando" class="text-center mt-4" style="display: none;">
+                    <h3>Compartilhando momentos há...</h3>
+                </div>
+                
+                <!-- Cards de Data (Anos, Meses, Dias) -->
+                <div class="data-card" style="display: none;">
+                    <p id="anos-preview">00</p>
+                    <h5>Anos</h5>
+                </div>
+                <div class="data-card" style="display: none;">
+                    <p id="meses-preview">00</p>
+                    <h5>Meses</h5>
+                </div>
+                <div class="data-card" style="display:none;">
+                    <p id="dias-preview">00</p>
+                    <h5>Dias</h5>
+                </div>
+
+                <!-- Cards de Tempo (Horas, Minutos, Segundos) -->
+                <div class="data-card" style="display: none;">
+                    <p id="horas-preview">00</p>
+                    <h5>Horas</h5>
+                </div>
+                <div class="data-card" style="display: none;">
+                    <p id="minutos-preview">00</p>
+                    <h5>Minutos</h5>
+                </div>
+                <div class="data-card" style="display: none;">
+                    <p id="segundos-preview">00</p>
+                    <h5>Segundos</h5>
+                </div>
+            </div>
+
+            <!-- Exibição da data completa -->
+            <div id="data-completa" class="text-center mt-4" style="display: none;">
+                <p>Desde <span id="data-completa-texto">----</span></p>
+            </div>
+
+
+
+            
+            <!-- Seção para exibir o QR Code -->
+            <div id="qrcode-preview-container" class="text-center mb-3" style="display: none;">
+                <h4>Escaneie o QR Code para acessar sua página</h4>
+                <div id="qrcode-preview"></div>
+            </div>
+
         </section>
-        
+
+
+
     </main>
-    
+
     <footer class="text-center py-4">
         <div class="container">
             <!-- Informações do Copyright -->
@@ -277,6 +420,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wizard.js"></script> <!-- Coloque esse antes -->
     <script src="assets/js/video.js"></script> <!-- Coloque esse aqui -->
+    <script src="assets/js/datas.js"></script>
     <script src="assets/js/music.js"></script>
     <script src="assets/js/preview.js"></script>
     <script src="assets/js/caracteres.js"></script>
