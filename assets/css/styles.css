@@ -1419,50 +1419,9 @@ section.card {
 
 
 
-/* Fundos Animados */
-#ceu-brilhante {
-    background: url('path-to-stars-image.gif') no-repeat center center fixed;
-    background-size: cover;
-    animation: brilho 20s linear infinite;
-}
 
-@keyframes brilho {
-    0% { opacity: 0.8; }
-    50% { opacity: 1; }
-    100% { opacity: 0.8; }
-}
 
-#chuva-cometas {
-    background: url('path-to-comet-shower.gif') no-repeat center center fixed;
-    background-size: cover;
-    animation: cometas 10s linear infinite;
-}
 
-@keyframes cometas {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
-}
-
-#vortex-cores {
-    background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(255,255,0,0.8), rgba(0,255,255,0.8));
-    animation: vortex 10s infinite;
-}
-
-@keyframes vortex {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#aurora {
-    background: url('path-to-aurora-borealis.gif') no-repeat center center fixed;
-    background-size: cover;
-    animation: aurora 30s linear infinite;
-}
-
-@keyframes aurora {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
 }
 
 #nuvens {
@@ -1729,3 +1688,91 @@ footer .container {
     }
 }
 
+
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto);
+}
+
+/* Tema Claro (Padrão) */
+:root {
+    --cor-primaria: #007bff;
+    --cor-secundaria: #343a40;
+    --cor-terciaria: #6c757d;
+    --cor-fundo-primario: #f8f9fa;
+    --cor-fundo-secundario: #e9ecef;
+    --cor-texto: #000000;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+    --cor-primaria: #1a1a2e;
+    --cor-secundaria: #16213e;
+    --cor-terciaria: #0f3460;
+    --cor-fundo-primario: #121212;
+    --cor-fundo-secundario: #1e1e1e;
+    --cor-texto: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto);
+}
+
+
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] 
+[data-theme="dark"]  {
+    color: var(--cor-quartario) !important;
+}
+
+[data-theme="dark"] 
+[data-theme="dark"] span, 
+[data-theme="dark"] li, 
+[data-theme="dark"] a {
+    color: var(--cor-quartario) !important;
+}
+
+
+#toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#toggle-theme i {
+    font-size: 1.2rem; /* Tamanho padrão */
+    transition: font-size 0.2s ease-in-out;
+}
+
+/* Ajusta o tamanho do ícone para telas menores */
+@media (max-width: 768px) {
+    #toggle-theme {
+        width: 35px;
+        height: 35px;
+    }
+    
+    #toggle-theme i {
+        font-size: 1rem; /* Ícone um pouco menor */
+    }
+}
+
+/* Ajuste para telas muito pequenas (celulares compactos) */
+@media (max-width: 425px) {
+    #toggle-theme {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #toggle-theme i {
+        font-size: 0.9rem;
+    }
+}
