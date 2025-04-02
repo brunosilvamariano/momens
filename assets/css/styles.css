@@ -1417,6 +1417,71 @@ section.card {
 }
 
 
+
+
+/* Fundos Animados */
+#ceu-brilhante {
+    background: url('path-to-stars-image.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: brilho 20s linear infinite;
+}
+
+@keyframes brilho {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+#chuva-cometas {
+    background: url('path-to-comet-shower.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: cometas 10s linear infinite;
+}
+
+@keyframes cometas {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+#vortex-cores {
+    background: radial-gradient(circle, rgba(255,0,0,0.8), rgba(255,255,0,0.8), rgba(0,255,255,0.8));
+    animation: vortex 10s infinite;
+}
+
+@keyframes vortex {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#aurora {
+    background: url('path-to-aurora-borealis.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: aurora 30s linear infinite;
+}
+
+@keyframes aurora {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+#nuvens {
+    background: url('path-to-clouds.gif') no-repeat center center fixed;
+    background-size: cover;
+    animation: nuvens 15s linear infinite;
+}
+
+@keyframes nuvens {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
+}
+
+#nenhuma {
+    background: none;
+}
+
+
+
 /* ==========================================
     Estilos para a Etapa Final
 ========================================== */
@@ -1489,6 +1554,12 @@ section.card {
         padding: 10px 15px;
     }
 }
+
+
+
+
+
+
 
 /* ==========================================
     Estilos para a Pré-visualização com Fundo
