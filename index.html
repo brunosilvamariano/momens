@@ -234,29 +234,44 @@
                 </div>
             </div>
 
-            <div id="step-fundo" style="display: none;">
-                <h3 class="text-center">Escolha Animações ou Imagens de Fundo</h3>
-                <p class="text-center text-muted mb-3 texto-carinho">Selecione uma animação ou imagem para personalizar sua página.</p>
-                <select id="fundo-selecao" class="form-control mb-3">
-                    <option value="">Selecione uma animação</option>
-                    <option value="ceu-brilhante">Céu Brilhante</option>
-                    <option value="chuva-cometas">Chuva de Cometas</option>
-                    <option value="vortex-cores">Vortex de Cores</option>
-                    <option value="aurora">Aurora Boreal</option>
-                    <option value="nuvens">Nuvens</option>
-                    <option value="nenhuma">Nenhuma</option>
-                </select>
+            <!-- Etapa 7 - Escolha de Estilo Visual -->
+            <div id="step-estilo" style="display: none;">
+                <h3 class="text-center">Escolha o Estilo da Sua Página</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Selecione uma paleta de cores para representar o clima do momento.</p>
+
+                <div class="d-flex flex-column gap-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estiloVisual" id="estilo-romantico" value="romantico">
+                        <label class="form-check-label" for="estilo-romantico">
+                            ❤️ Romântico – tons suaves, rosa e vermelho claro
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estiloVisual" id="estilo-minimalista" value="minimalista">
+                        <label class="form-check-label" for="estilo-minimalista">
+                            🤍 Minimalista – branco, cinza fosco e azul claro
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estiloVisual" id="estilo-alegre" value="alegre">
+                        <label class="form-check-label" for="estilo-alegre">
+                            🌈 Alegre – cores vivas, amarelo, azul e verde
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="estiloVisual" id="estilo-classico" value="classico">
+                        <label class="form-check-label" for="estilo-classico">
+                            ✨ Clássico – dourado, branco e preto elegante
+                        </label>
+                    </div>
+                </div>
+
                 <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
                     <button id="back-btn-6" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
                     <button id="next-btn-7" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
                 </div>
             </div>
-            
 
-          
-
-
-    
             <!-- Etapa 8 - Visualização -->
             <div id="step-visualizacao" style="display: none;">
                 <h3 class="text-center">Visualize Sua Página</h3>
@@ -392,15 +407,8 @@
             </div>
 
           <!-- Container da chuva de emojis (animação) -->
-  <!-- Seção para exibir a pré-visualização do vídeo -->
-  <div id="video-preview-container" class="text-center mb-3" style="display: none;">
-    <h4>Nossos momentos, nossa história</h4>
-    <video id="video-preview" controls style="border-radius: var(--bordas-arredondadas); width: 100%; max-width: 100%;">
-        <source id="video-source" src="" type="video/mp4" />
-        Seu navegador não suporta o vídeo.
-    </video>
-</div>
-            
+
+
             <!-- Seção para exibir o QR Code -->
             <div id="qrcode-preview-container" class="text-center mb-3" style="display: none;">
                 <h4>Escaneie o QR Code para acessar sua página</h4>
