@@ -58,40 +58,38 @@
 
 <body>
     <header>
-        <!-- Barra de Navegação -->
         <nav class="navbar navbar-expand-lg navbar-dark shadow">
-            <!-- Botão de alternância de tema -->
-            <button id="toggle-theme" class="btn btn-outline-light">
-                <i class="bi bi-moon"></i>
-            </button>
-
-            <!-- Botão de alternância de tema -->
             <div class="container d-flex justify-content-between align-items-center">
-                <!-- Logo alinhada à esquerda -->
-                <a class="navbar-brand" href="/">
-                    <img src="assets/img/logo/logo.png" alt="Logo Momentos Incríveis" width="120" height="40" class="d-inline-block align-middle">
-                </a>
-        
-                <!-- Botão para o menu em dispositivos móveis -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+                <!-- Logo + Botão de Tema -->
+                <div class="navbar-brand d-flex align-items-center gap-2">
+                    <!-- Botão de alternância de tema -->
+                    <button id="toggle-theme" class="btn btn-outline-light p-1 rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                    <a href="/">
+                        <img src="assets/img/logo/logo.png" alt="Logo Momentos Incríveis" width="120" height="40" class="d-inline-block align-middle">
+                    </a>
+                </div>
+    
+                <!-- Botão hamburguer (mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <!-- Links de navegação (colapsados em dispositivos móveis) -->
+    
+                <!-- Menu de navegação -->
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto d-flex justify-content-end w-100">
                         <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">F.A.Q</a></li>
-                        <!-- Menu de Login -->
                         <li class="nav-item">
-                            <!-- Botão de Login -->
                             <a class="nav-link d-flex align-items-center" href="#" id="login-toggle">
                                 <i class="bi bi-gift-fill me-2"></i>Login
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
