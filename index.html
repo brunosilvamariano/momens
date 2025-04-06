@@ -234,6 +234,25 @@
                 </div>
             </div>
 
+             <!-- Etapa 7 - Seleção de fundo -->
+            <div id="step-fundo" style="display: none;">
+                <h3 class="text-center">Escolha Animações ou Imagens de Fundo</h3>
+                <p class="text-center text-muted mb-3 texto-carinho">Selecione uma animação ou imagem para personalizar sua página.</p>
+                <select id="fundo-selecao" class="form-control mb-3">
+                    <option value="">Selecione uma animação</option>
+                    <option value="ceu-brilhante">Céu Brilhante</option>
+                    <option value="chuva-cometas">Chuva de Cometas</option>
+                    <option value="vortex-cores">Vortex de Cores</option>
+                    <option value="aurora">Aurora Boreal</option>
+                    <option value="nuvens">Nuvens</option>
+                    <option value="nenhuma">Nenhuma</option>
+                </select>
+                <div class="d-flex justify-content-between flex-column flex-sm-row gap-3 mt-4">
+                    <button id="back-btn-6" class="btn btn-secondary w-100 w-sm-auto">⬅️ Voltar</button>
+                    <button id="next-btn-7" class="btn btn-primary w-100 w-sm-auto">Próxima Etapa ➡️</button>
+                </div>
+            </div>
+            
             <!-- Etapa 7 - Escolha de Estilo Visual -->
             <div id="step-estilo" style="display: none;">
                 <h3 class="text-center">Escolha o Estilo da Sua Página</h3>
@@ -410,8 +429,15 @@
                 <p>Desde <span id="data-completa-texto">----</span></p>
             </div>
 
-            <!-- Container da chuva de emojis (animação) -->
-
+          <!-- Container da chuva de emojis (animação) -->
+  <!-- Seção para exibir a pré-visualização do vídeo -->
+  <div id="video-preview-container" class="text-center mb-3" style="display: none;">
+    <h4>Nossos momentos, nossa história</h4>
+    <video id="video-preview" controls style="border-radius: var(--bordas-arredondadas); width: 100%; max-width: 100%;">
+        <source id="video-source" src="" type="video/mp4" />
+        Seu navegador não suporta o vídeo.
+    </video>
+</div>
             
             <!-- Seção para exibir o QR Code -->
             <div id="qrcode-preview-container" class="text-center mb-3" style="display: none;">
@@ -452,7 +478,7 @@
     <script src="assets/js/wizard.js"></script> <!-- Coloque esse antes -->
     <script src="assets/js/video.js"></script> <!-- Coloque esse aqui -->
     <script src="assets/js/datas.js"></script>
-   
+    <script src="assets/js/temadark.js"></script>
     <script src="assets/js/music.js"></script>
     <script src="assets/js/preview.js"></script>
     <script src="assets/js/caracteres.js"></script>

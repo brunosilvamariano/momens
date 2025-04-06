@@ -2,143 +2,150 @@
     /* ==========================================
             Cores Primárias e Secundárias
     ========================================== */
-    --cor-primaria: #007bff;
-    --cor-secundaria: #343a40;
-    --cor-terciaria: #6c757d;
-    --cor-quaternaria: #28a745;
+    --cor-primaria: #007bff; /* Azul vibrante (primária) */
+    --cor-secundaria: #343a40; /* Cinza escuro (secundária) */
+    --cor-terciaria: #6c757d; /* Cinza fosco, neutro */
+    --cor-quaternaria: #28a745; /* Verde vibrante */
 
     /* ==========================================
             Cores de Texto
     ========================================== */
-    --cor-titulo: #2C3E50;
-    --cor-subtitulo: #34495E;
-    --cor-paragrafo: #7F8C8D;
-    --cor-link: #007bff;
-    --cor-link-hover: #0056b3;
-    --cor-botao-texto: #FFFFFF;
-    --cor-texto-destaque: #28a745;
-    --cor-texto: #000000;
+    --cor-titulo: #2C3E50; /* Azul escuro para títulos */
+    --cor-subtitulo: #34495E; /* Cinza azulado para subtítulos */
+    --cor-paragrafo: #7F8C8D; /* Cinza escuro para texto do parágrafo */
+    --cor-link: #007bff; /* Azul vibrante para os links */
+    --cor-link-hover: #0056b3; /* Azul mais escuro para links ao passar o mouse */
+    --cor-botao-texto: #FFFFFF; /* Branco para o texto dos botões */
+    --cor-texto-destaque: #28a745; /* Verde para texto de destaque */
 
     /* ==========================================
             Cores de Fundo
     ========================================== */
-    --cor-fundo-primario: #f8f9fa;
-    --cor-fundo-secundario: #e9ecef;
-    --cor-fundo-input: #ffffff;
-    --cor-fundo-botao: #007bff;
-    --cor-fundo-botao-hover: #0056b3;
-    --cor-fundo-destaque: #28a745;
+    --cor-fundo-primario: #f8f9fa; /* Fundo claro e neutro para o site */
+    --cor-fundo-secundario: #e9ecef; /* Fundo secundário em cinza claro */
+    --cor-fundo-input: #ffffff; /* Fundo branco para os campos de input */
+    --cor-fundo-botao: #007bff; /* Azul vibrante para o fundo dos botões */
+    --cor-fundo-botao-hover: #0056b3; /* Azul mais escuro para o fundo do botão ao passar o mouse */
+    --cor-fundo-destaque: #28a745; /* Verde vibrante para destaque */
 
     /* ==========================================
             Sombra e Efeitos
     ========================================== */
-    --sombra-suave: 0 2px 6px rgba(0, 0, 0, 0.1);
-    --sombra-forte: 0 4px 12px rgba(0, 0, 0, 0.2);
-    --sombra-hover: 0 6px 18px rgba(0, 0, 0, 0.3);
+    --sombra-suave: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --sombra-forte: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --sombra-hover: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
 
     /* ==========================================
             Gradientes
     ========================================== */
-    --gradiente-primario: linear-gradient(135deg, #007bff, #343a40);
-    --gradiente-secundario: linear-gradient(135deg, #f8f9fa, #28a745);
+    --gradiente-primario: linear-gradient(135deg, #007bff, #343a40); /* Gradiente do azul vibrante ao cinza escuro */
+    --gradiente-secundario: linear-gradient(135deg, #f8f9fa, #28a745); /* Gradiente do fundo claro ao verde */
+
 
     /* ==========================================
         Tipografia
      ========================================== */
-    --fonte-principal: 'Poppins', sans-serif;
-    --fonte-secundaria: "Dancing Script", cursive;
-    --tamanho-fonte-titulo: 2rem;
-    --tamanho-fonte-subtitulo: 1.5rem;
-    --tamanho-fonte-paragrafo: 1rem;
-    --tamanho-fonte-pequena: 0.875rem;
-    --peso-fonte-titulo: 700;
-    --peso-fonte-normal: 400;
-    --altura-linha: 1.6;
-
+    --fonte-principal: 'Poppins', sans-serif; /* Fonte principal do site */
+    --fonte-secundaria: "Dancing Script", cursive; /* Fonte secundária */
+    --tamanho-fonte-titulo: 2rem; /* Tamanho da fonte para os títulos */
+    --tamanho-fonte-subtitulo: 1.5rem; /* Tamanho da fonte para os subtítulos */
+    --tamanho-fonte-paragrafo: 1rem; /* Tamanho da fonte para o texto principal */
+    --tamanho-fonte-pequena: 0.875rem; /* Tamanho da fonte para texto pequeno */
+    --peso-fonte-titulo: 700; /* Peso da fonte para os títulos */
+    --peso-fonte-normal: 400; /* Peso da fonte normal para parágrafos */
+    --altura-linha: 1.6; /* Altura da linha para legibilidade */
+    
     /* ==========================================
         Responsividade para Imagens
      ========================================== */
-    --tamanho-imagem-max: 100%;
-    --tamanho-imagem-min: 300px;
-    --tamanho-imagem-max-grande: 80%;
-    --tamanho-imagem-max-media: 90%;
-    --tamanho-imagem-max-pequena: 100%;
-
+    --tamanho-imagem-max: 100%; /* Tamanho máximo de imagem (100% da largura do container) */
+    --tamanho-imagem-min: 300px; /* Tamanho mínimo para as imagens */
+     
+    /* Responsividade das imagens para diferentes telas */
+    --tamanho-imagem-max-grande: 80%; /* Para telas grandes */
+    --tamanho-imagem-max-media: 90%; /* Para telas médias */
+    --tamanho-imagem-max-pequena: 100%; /* Para telas pequenas */
+     
     /* ==========================================
         Espaçamento Responsivo
      ========================================== */
-    --espaco-pequeno: 8px;
-    --espaco-medium: 16px;
-    --espaco-grande: 32px;
-    --espaco-extra-grande: 64px;
-    --espaco-entre-linhas: 24px;
-
+    --espaco-pequeno: 8px; /* Pequeno espaço de margem/padding */
+    --espaco-medium: 16px; /* Espaço médio de margem/padding */
+    --espaco-grande: 32px; /* Grande espaço de margem/padding */
+    --espaco-extra-grande: 64px; /* Espaço extra grande de margem/padding */
+    --espaco-entre-linhas: 24px; /* Espaço entre linhas de texto */
+     
+    /* ==========================================
+        Sombra e Efeitos
+     ========================================== */
+    --sombra-suave: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    --sombra-forte: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --sombra-hover: 0 6px 18px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+     
     /* ==========================================
         Bordas
      ========================================== */
-    --bordas-arredondadas: 6px;
-    --borda-fina: 1px;
-    --borda-media: 2px;
-    --borda-grande: 4px;
+    --bordas-arredondadas: 6px; /* Bordas arredondadas em botões, inputs etc. */
+    --borda-fina: 1px; /* Bordas finas */
+    --borda-media: 2px; /* Bordas médias */
+    --borda-grande: 4px; /* Bordas espessas */
+     
 
     /* ==========================================
         Layout e Grid Responsivo
      ========================================== */
-    --largura-maxima: 1200px;
-    --largura-conteudo: 960px;
-    --espaco-grid: 16px;
-    --gutter-grid: 32px;
-    --largura-container: 90vw;
-    --altura-section: 60vh;
+    --largura-maxima: 1200px; /* Largura máxima do layout */
+    --largura-conteudo: 960px; /* Largura do conteúdo */
+    --espaco-grid: 16px; /* Espaçamento entre os itens no grid */
+    --gutter-grid: 32px; /* Espaçamento entre colunas no grid */
+    --largura-container: 90vw; /* Largura do container em viewport */
+    --altura-section: 60vh; /* Altura da seção em viewport */
 
-    /* ==========================================
+       /* ==========================================
         Z-Index
      ========================================== */
-    --z-index-baixo: 10;
-    --z-index-normal: 100;
-    --z-index-alto: 1000;
+     --z-index-baixo: 10;
+     --z-index-normal: 100;
+     --z-index-alto: 1000;
+      
+     /* ==========================================
+         Transições e Animações
+      ========================================== */
+     --duracao-transicao: 0.3s; 
+     --duracao-animacao: 1s;
+     --timing-function: ease-in-out;
+     --delay-transicao: 0.2s;
+      
 
-    /* ==========================================
-        Transições e Animações
-     ========================================== */
-    --duracao-transicao: 0.3s;
-    --duracao-animacao: 1s;
-    --timing-function: ease-in-out;
-    --delay-transicao: 0.2s;
+     @media (min-width: 1200px) {
+        :root {
+            --tamanho-fonte-titulo: 3.5rem;
+            --tamanho-fonte-subtitulo: 2.5rem;
+            --tamanho-imagem-max: 80%;
+            --largura-container: 70vw;
+            --altura-section: 50vh;
+        }
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+        :root {
+            --tamanho-fonte-titulo: 2.5rem;
+            --tamanho-fonte-subtitulo: 2rem;
+            --tamanho-imagem-max: 90%;
+            --largura-container: 80vw;
+            --altura-section: 55vh;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        :root {
+            --tamanho-fonte-titulo: 2rem;
+            --tamanho-fonte-subtitulo: 1.5rem;
+            --tamanho-imagem-max: 100%;
+            --largura-container: 100vw;
+            --altura-section: 70vh;
+        }
 }
-
-/* Tema Escuro */
-[data-theme="dark"] {
-    --cor-primaria: #1a1a2e;
-    --cor-secundaria: #16213e;
-    --cor-terciaria: #0f3460;
-    --cor-fundo-primario: #121212;
-    --cor-fundo-secundario: #1e1e1e;
-    --cor-texto: #ffffff;
-    --cor-link: #3399ff;
-    --cor-link-hover: #66b3ff;
-    --cor-botao-texto: #ffffff;
-    --cor-fundo-botao: #0f3460;
-    --cor-fundo-botao-hover: #1a1a2e;
-    --cor-titulo: #ffffff;
-    --cor-subtitulo: #dddddd;
-    --cor-paragrafo: #cccccc;
-    --cor-texto-destaque: #28a745;
-}
-
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4,
-[data-theme="dark"] h5,
-[data-theme="dark"] h6,
-[data-theme="dark"] p,
-[data-theme="dark"] span,
-[data-theme="dark"] li,
-[data-theme="dark"] a {
-    color: var(--cor-link) !important;
-}
-
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fonte-secundaria); /* Fonte principal para os títulos */
@@ -147,73 +154,65 @@ h1, h2, h3, h4, h5, h6 {
     Estilos do Cabeçalho
 ========================================== */
 header {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria); /* Fundo com a cor primária */
     padding: var(--espaco-medium) 0;
 }
 
-/* ===========================
-   Navbar
-=========================== */
 .navbar {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria); /* Cor de fundo escura para a navbar */
     border-radius: var(--bordas-arredondadas);
     box-shadow: var(--sombra-suave);
-    width: auto;
-    max-width: var(--largura-conteudo);
-    margin: 0 auto;
-    padding: 0 var(--espaco-medium);
+    width: auto; /* Ajuste para a largura não ocupar toda a tela */
+    max-width: var(--largura-conteudo); /* Largura máxima definida pela variável */
+    margin: 0 auto; /* Centraliza a navbar */
+    padding: 0 var(--espaco-medium); /* Adiciona padding nas laterais */
 }
 
 .navbar .container {
-    width: 100%;
-    padding: 0;
+    width: 100%; /* Garantir que o conteúdo da navbar ocupe a largura disponível dentro do limite */
+    padding: 0; /* Remove padding extra */
 }
 
 .navbar-brand {
-    padding-left: var(--espaco-medium);
-    padding-right: var(--espaco-medium);
+    padding-left: var(--espaco-medium); /* Adiciona espaço à esquerda da logo */
+    padding-right: var(--espaco-medium); /* Adiciona espaço à direita da logo */
 }
 
 .navbar-brand img {
     filter: brightness(0) invert(1);
 }
 
-/* ===========================
-   Itens de Navegação
-=========================== */
 .navbar-nav {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-left: var(--espaco-medium);
-    padding-right: var(--espaco-medium);
+    padding-left: var(--espaco-medium); /* Adiciona espaço à esquerda dos links */
+    padding-right: var(--espaco-medium); /* Adiciona espaço à direita dos links */
+    display: flex; /* Faz os itens de navegação ficarem lado a lado */
+    justify-content: space-around; /* Distribui os itens com espaçamento */
+    flex-wrap: wrap; /* Permite que os itens se ajustem ao tamanho da tela */
 }
 
+/* Estilos para os links na barra de navegação */
 .navbar-nav .nav-item {
-    margin-right: var(--espaco-medium);
-    margin-bottom: var(--espaco-small);
+    margin-right: var(--espaco-medium); /* Espaçamento entre os itens de navegação */
+    margin-bottom: var(--espaco-small); /* Adiciona margem inferior para melhor espaçamento */
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: var(--cor-botao-texto);
+    color: var(--cor-botao-texto); /* Cor branca para os links */
     padding: var(--espaco-small) var(--espaco-medium);
     transition: background-color var(--duracao-transicao), color var(--duracao-transicao);
 }
 
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link:focus {
-    background-color: var(--cor-botao-hover);
-    color: var(--cor-botao-texto);
+    background-color: var(--cor-botao-hover); /* Cor de fundo ao passar o mouse */
+    color: var(--cor-botao-texto); /* Garante que o texto permaneça branco */
 }
 
 .navbar-nav .nav-item .nav-link.active {
-    background-color: var(--cor-botao-texto);
+    background-color: var(--cor-botao-texto); /* Cor de fundo para o link ativo */
     color: var(--cor-primaria);
 }
 
-/* ===========================
-   Botão de Login
-=========================== */
 #login-toggle {
     color: var(--cor-botao-texto);
     padding: var(--espaco-small) var(--espaco-medium);
@@ -226,50 +225,50 @@ header {
     color: var(--cor-botao-texto);
 }
 
-/* ===========================
-   Corpo da Página
-=========================== */
-body {
-    background-color: var(--cor-fundo-primario);
-    color: var(--cor-texto);
-}
+/* ==========================================
+    Estilos Responsivos
+========================================== */
 
-[data-theme="dark"] h1,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4,
-[data-theme="dark"] span,
-[data-theme="dark"] li,
-[data-theme="dark"] a {
-    color: var(--cor-quartario) !important;
-}
-
-#toggle-theme {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#toggle-theme i {
-    font-size: 0.8rem;
-    transition: font-size 0.2s ease-in-out;
-}
-
-/* Telas até 768px (tablets) */
+/* Tela de 768px (tablets e telas maiores) */
 @media (max-width: 768px) {
     .navbar {
-        width: 85%;
+        width: 85%; /* Navbar ocupa 85% da largura da tela */
     }
 
     .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Os links ficam em coluna */
+        justify-content: center;
+        align-items: center; /* Centraliza os links */
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0; /* Adiciona margem entre os itens */
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: var(--espaco-medium) var(--espaco-medium); /* Ajusta o espaçamento */
+        text-align: center; /* Centraliza o texto */
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        font-size: 1.2rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+/* Tela de 425px (celulares pequenos) */
+@media (max-width: 425px) {
+    .navbar {
+        width: 90%; /* Navbar ocupa 90% da largura da tela */
+    }
+
+    .navbar-nav {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
     }
 
     .navbar-nav .nav-item {
@@ -277,85 +276,73 @@ body {
     }
 
     .navbar-nav .nav-item .nav-link {
-        padding: var(--espaco-medium);
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
         text-align: center;
         width: 100%;
     }
 
-    .navbar-toggler,
-    #toggle-theme i {
-        font-size: 1.2rem;
-    }
-}
-
-/* Telas até 425px (celulares médios) */
-@media (max-width: 425px) {
-    .navbar {
-        width: 90%;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-        font-size: 0.9rem;
-        padding: var(--espaco-small);
-        width: 100%;
-    }
-
     #login-toggle {
         font-size: 0.9rem;
     }
 
-    #toggle-theme i {
-        font-size: 0.9rem;
+    .navbar-toggler {
+        font-size: 1.2rem; /* Ajusta o tamanho do ícone do toggler */
     }
 }
 
-/* Telas até 375px (celulares pequenos) */
+/* Tela de 375px (celulares menores) */
 @media (max-width: 375px) {
     .navbar {
-        width: 95%;
+        width: 95%; /* Navbar ocupa 95% da largura da tela */
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0;
     }
 
     .navbar-nav .nav-item .nav-link {
-        font-size: 0.85rem;
-        padding: var(--espaco-small);
-    }
-
-    #login-toggle {
-        font-size: 0.85rem;
-    }
-
-    .navbar-toggler,
-    #toggle-theme i {
-        font-size: 1rem;
-    }
-}
-
-/* Telas até 320px (celulares muito pequenos) */
-@media (max-width: 320px) {
-    .navbar {
+        font-size: 0.85rem; /* Ajuste no tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
+        text-align: center;
         width: 100%;
     }
 
+    #login-toggle {
+        font-size: 0.85rem;
+    }
+
+    .navbar-toggler {
+        font-size: 1rem; /* Ajusta o tamanho do ícone do toggler */
+    }
+}
+
+/* Tela de 320px (celulares muito pequenos) */
+@media (max-width: 320px) {
+    .navbar {
+        width: 100%; /* Navbar ocupa 100% da largura da tela */
+    }
+
+    .navbar-nav .nav-item {
+        margin: var(--espaco-small) 0;
+    }
+
     .navbar-nav .nav-item .nav-link {
-        font-size: 0.8rem;
-        padding: var(--espaco-small);
+        font-size: 0.8rem; /* Ajuste no tamanho da fonte */
+        padding: var(--espaco-small) var(--espaco-small);
+        text-align: center;
+        width: 100%;
     }
 
     #login-toggle {
         font-size: 0.8rem;
     }
 
-    .navbar-toggler,
-    #toggle-theme i {
-        font-size: 1rem;
+    .navbar-toggler {
+        font-size: 1rem; /* Ajusta o tamanho do ícone do toggler */
     }
 }
+
 
 /* ==========================================
     Estilos para a Barra de Progresso
@@ -1702,3 +1689,90 @@ footer .container {
 }
 
 
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto);
+}
+
+/* Tema Claro (Padrão) */
+:root {
+    --cor-primaria: #007bff;
+    --cor-secundaria: #343a40;
+    --cor-terciaria: #6c757d;
+    --cor-fundo-primario: #f8f9fa;
+    --cor-fundo-secundario: #e9ecef;
+    --cor-texto: #000000;
+}
+
+/* Tema Escuro */
+[data-theme="dark"] {
+    --cor-primaria: #1a1a2e;
+    --cor-secundaria: #16213e;
+    --cor-terciaria: #0f3460;
+    --cor-fundo-primario: #121212;
+    --cor-fundo-secundario: #1e1e1e;
+    --cor-texto: #ffffff;
+}
+
+body {
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-texto);
+}
+
+
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] 
+[data-theme="dark"]  {
+    color: var(--cor-quartario) !important;
+}
+
+[data-theme="dark"] 
+[data-theme="dark"] span, 
+[data-theme="dark"] li, 
+[data-theme="dark"] a {
+    color: var(--cor-quartario) !important;
+}
+
+
+#toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#toggle-theme i {
+    font-size: 0.8rem; /* Tamanho padrão */
+    transition: font-size 0.2s ease-in-out;
+}
+
+/* Ajusta o tamanho do ícone para telas menores */
+@media (max-width: 768px) {
+    #toggle-theme {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #toggle-theme i {
+        font-size: 1rem; /* Ícone um pouco menor */
+    }
+}
+
+/* Ajuste para telas muito pequenas (celulares compactos) */
+@media (max-width: 425px) {
+    #toggle-theme {
+        width: 35px;
+        height: 35px;
+    }
+    
+    #toggle-theme i {
+        font-size: 0.9rem;
+    }
+}
